@@ -44,11 +44,11 @@ CREATE TABLE Movie
 (
 	MovieID INT IDENTITY(5000,1) NOT NULL PRIMARY KEY,
 	GenreID INT NOT NULL REFERENCES Genre(GenreID),
-	DirectorID INT NOT NULL REFERENCES Director(DirectorID)
-	MovieName VARCHAR(1000) NOT NULL,
+	DirectorID INT NOT NULL REFERENCES Director(DirectorID),
+	MovieTitle VARCHAR(1000) NOT NULL,
 	DateOfRelease DATETIME NOT NULL,
 	Duration TIMESTAMP NOT NULL,
-	Description VARCHAR(MAX)NOT NULL,
+	MovieDescription VARCHAR(MAX)NOT NULL,
 	Ratings NUMBER(1,1),
 	Region VARCHAR(100) NOT NULL
 )
@@ -63,7 +63,7 @@ CREATE TABLE Customer
 	Gender VARCHAR(50) NOT NULL,
 	Username VARCHAR(1000) NOT NULL,
 	UserPassword VARCHAR(1000) NOT NULL,
-	CustomerStatus ----- Boolean Y or N
+	CustomerStatus VARCHAR(45) NOT NULL CHECK (CustomerStatus IN ('ACTIVE', 'NOT ACTIVE')),
 	CreationDate TIMESTAMP NOT NULL
 )
 
@@ -79,9 +79,9 @@ CREATE TABLE [Address]
 
 )
 
-CREATE TABLE [Plan]
+CREATE TABLE Movie_Plan
 (
-	PlanID INT IDENTITY(20)NOT NULL PRIMARY KEY,
+	PlanID INT IDENTITY(20,1) NOT NULL PRIMARY KEY,
 	PlanName VARCHAR(1000) NOT NULL,
 	PlanDescription VARCHAR(1000) NOT NULL,
 	ScreenLimit INT(1) NOT NULL
@@ -89,8 +89,8 @@ CREATE TABLE [Plan]
 
 CREATE TABLE Purchase 
 (
-	PurchaseID INT IDENTITY(9000) NOT NULL PRIMARY KEY,
-	PlanID INT NOT NULL REFERENCES Plan(PlanID),
+	PurchaseID INT IDENTITY(9000,1) NOT NULL PRIMARY KEY,
+	PlanID INT NOT NULL REFERENCES Movie_Plan(PlanID),
 	CustomerID INT NOT NULL REFERENCES Customer(CustomerID),
 	StartDate TIMESTAMP NOT NULL,
 	EndDate TIMESTAMP NOT NULL
@@ -98,7 +98,7 @@ CREATE TABLE Purchase
 
 CREATE TABLE Download
 (
-	DownloadID INT IDENTITY(4000) NOT NULL PRIMARY KEY,
+	DownloadID INT IDENTITY(4000,1) NOT NULL PRIMARY KEY,
 	MovieID INT NOT NULL REFERENCES Movie(MovieID),
 	CustomerID INT NOT NULL REFERENCES Customer(CustomerID),
 	DateOfDownload TIMESTAMP
@@ -107,7 +107,7 @@ CREATE TABLE Download
 
 CREATE TABLE Favorite
 (
-	FavoriteID INT IDENTITY(4000) NOT NULL PRIMARY KEY,
+	FavoriteID INT IDENTITY(4000,1) NOT NULL PRIMARY KEY,
 	MovieID INT NOT NULL REFERENCES Movie(MovieID),
 	CustomerID INT NOT NULL REFERENCES Customer(CustomerID)
 
@@ -115,7 +115,7 @@ CREATE TABLE Favorite
 
 CREATE TABLE History
 (
-	HistoryID INT IDENTITY(4000) NOT NULL PRIMARY KEY,
+	HistoryID INT IDENTITY(4000,1) NOT NULL PRIMARY KEY,
 	MovieID INT NOT NULL REFERENCES Movie(MovieID),
 	CustomerID INT NOT NULL REFERENCES Customer(CustomerID),
 	Watchtime TIMESTAMP
@@ -124,14 +124,14 @@ CREATE TABLE History
 
 CREATE TABLE Director
 (
-	DirectorID INT IDENTITY(4000) NOT NULL PRIMARY KEY,
+	DirectorID INT IDENTITY(4000,1) NOT NULL PRIMARY KEY,
 	DirectorFirstName VARCHAR(1000) NOT NULL,
 	DirectorLastName VARCHAR(1000) NOT NULL
 )
 
 CREATE TABLE Subtitles
 (
-	SubtitlesID INT IDENTITY(4000) NOT NULL PRIMARY KEY,
+	SubtitlesID INT IDENTITY(4000,1) NOT NULL PRIMARY KEY,
 	MovieID INT NOT NULL REFERENCES Movie(MovieID),
 	Text VARCHAR(MAX),
 	Language VARCHAR(100)
@@ -139,11 +139,11 @@ CREATE TABLE Subtitles
 
 CREATE TABLE Genre
 (
-	GenreID INT IDENTITY(200) NOT NULL PRIMARY KEY,
+	GenreID INT IDENTITY(200,1) NOT NULL PRIMARY KEY,
 	GenreName VARCHAR(1000) NOT NULL
 )
 
-CREATE TABLE [Cast]
+CREATE TABLE Movie_Cast
 (
 	MovieID INT NOT NULL REFERENCES Movie(MovieID),
 	ActorID INT NOT NULL REFERENCES Actor(ActorID)
@@ -151,7 +151,7 @@ CREATE TABLE [Cast]
 
 CREATE TABLE Actor
 (
-	ActorID INT IDENTITY(10000) NOT NULL PRIMARY KEY,
+	ActorID INT IDENTITY(10000,1) NOT NULL PRIMARY KEY,
 	ActorFirstName VARCHAR(1000) NOT NULL,
 	ActorLastName VARCHAR(1000) NOT NULL
 )
@@ -178,11 +178,13 @@ GO
 
 ALTER TABLE Account ADD CONSTRAINT BanBadInput CHECK (dbo.CheckAccType(AccountType) = 1)
 GO
+-- Calculate the total number of active users by region
+-- Calculate the most viewed movies within the past month by region
+-- Calculate the total revenue made in the last year
+-- Calculate the number of new users per month
+-- Calculate the number of users who have bought another subscription
+-- Calculate the most loyal customers and how much money the company made (retention)
+-- Calculate demographics: age group by movie, region by  most watched genre
+-- 
 
 
-
-/*
- * Create View
- */
-
---MEGHA WILL DO
