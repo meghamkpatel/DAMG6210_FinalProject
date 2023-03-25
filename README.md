@@ -16,3 +16,5 @@ To run our Project 3 here are instructions:
 10. run analyst.sql line by line to see the views in a clear format
 11. change account to DB_MANAGER with password DUSMS@2023dman
 12. run manager.sql line by line to see the views in a clear format
+
+* Please view the Database_Roles_Script.sql to see how we created and granted user access
