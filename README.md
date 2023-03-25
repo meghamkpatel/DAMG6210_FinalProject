@@ -4,9 +4,9 @@ Dear TA Team,
 
 To run our Project 3 here are instructions:
 1. connect to database with wallet provided with username: ADMIN password Ilovenaveen11
-2. run CreateandInsertion.sql script
+2. change account to DB_ADMIN with password DUSMS@2023dmdd
+3. run CreateandInsertion.sql script
    * this creates tables, inserts data into the tables, and grants access to tables 
-3. change account to DB_ADMIN with password DUSMS@2023dmdd
 4. run views.sql line by line to see the views in a clear format
 5. change account to DB_CONTENTMGR with password DUSMS@2023cm
 6. run content.sql line by line to see the views in a clear format
