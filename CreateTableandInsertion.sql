@@ -199,7 +199,7 @@ CREATE TABLE Region
     CONSTRAINT region_fk FOREIGN KEY (MovieID) REFERENCES Movie(MovieID) ON DELETE CASCADE
 )
 /
-*/
+
 ------------------------Customer-------------------------------
 insert into Customer (CustomerID, UserFirstName, UserLastName, Email, DateOfBirth, Gender, Username, UserPassword, CustomerStatus, CreationDate) values (1, 'Brand', 'Tomblett', 'btomblett0@imageshack.us', '22-NOV-1955', 'MALE', 'btomblett0', '176VSDd72S', 'ACTIVE', '30-DEC-2011');
 insert into Customer (CustomerID, UserFirstName, UserLastName, Email, DateOfBirth, Gender, Username, UserPassword, CustomerStatus, CreationDate) values (2, 'Gradey', 'Dregan', 'gdregan1@privacy.gov.au', '23-MAY-1989', 'MALE', 'gdregan1', 'zdncNL7hk', 'ACTIVE', '22-JAN-2013');
@@ -7770,12 +7770,6 @@ SELECT * FROM Region;
 
 commit;
 
-GRANT CONNECT, RESOURCE TO DB_ADMIN;
-GRANT CREATE SESSION TO DB_ADMIN;
-GRANT UNLIMITED TABLESPACE TO DB_ADMIN;
-
-
-GRANT CONNECT TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.movie TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.director TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.actor TO DB_CONTENTMGR;
@@ -7783,13 +7777,11 @@ GRANT ALL PRIVILEGES ON db_admin.subtitles TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.genre TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.movie_cast TO DB_CONTENTMGR;
 GRANT ALL PRIVILEGES ON db_admin.watch_history TO DB_CONTENTMGR;
+GRANT ALL PRIVILEGES ON db_admin.watchlist TO DB_CONTENTMGR;
 
-
-GRANT CONNECT TO DB_BILLINGMGR;
 GRANT ALL PRIVILEGES ON db_admin.CUSTOMER TO DB_BILLINGMGR;
 GRANT ALL PRIVILEGES ON db_admin.SUBSCRIPTION_PLAN TO DB_BILLINGMGR;
 GRANT ALL PRIVILEGES ON db_admin.PURCHASE TO DB_BILLINGMGR;
-
 
 GRANT SELECT on db_admin.customer TO DB_ANALYST;
 GRANT SELECT on db_admin.watchlist TO DB_ANALYST;
@@ -7804,7 +7796,6 @@ GRANT SELECT on db_admin.director to DB_ANALYST;
 GRANT SELECT on db_admin.movie_cast to DB_ANALYST;
 GRANT SELECT on db_admin.actor to DB_ANALYST;
 GRANT SELECT on db_admin.subscription_plan to DB_ANALYST;
-
 
 GRANT SELECT, INSERT, UPDATE ON db_admin.actor TO DB_MANAGER;
 GRANT SELECT, INSERT, UPDATE ON db_admin.address TO DB_MANAGER;
