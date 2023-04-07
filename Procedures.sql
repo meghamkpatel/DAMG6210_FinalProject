@@ -324,3 +324,62 @@ BEGIN
     end if;
 END;
 /
+
+-----region-------------------------------------------------------------------------
+CREATE or REPLACE PROCEDURE ADD_REGION (vcountryname VARCHAR)
+IS
+    r_region region%ROWTYPE;
+    vmaxregion number;
+BEGIN
+    ---first check if region exists
+    select * into r_region from region where countryname = vcountryname;
+    
+    if r_region.regionid is not null then
+        DBMS_OUTPUT.PUT_LINE('Region already exists.');
+    else
+        select max(regionid)+1 into vmaxregion from region;
+        INSERT INTO region VALUES(vmaxregion, vcountryname);
+        DBMS_OUTPUT.PUT_LINE('Region added!');
+    end if;
+END;
+/
+
+-----Genre--------------------------------------------------------------------------
+CREATE or REPLACE PROCEDURE ADD_Genre (vgenrename VARCHAR)
+IS
+    r_genre genre%ROWTYPE;
+    vmaxgenre number;
+BEGIN
+    ---first check if genre exists
+    select * into r_genre from region where genrename = vgenrename;
+    
+    if r_genre.genreid is not null then
+        DBMS_OUTPUT.PUT_LINE('Genre already exists.');
+    else
+        select max(genreid)+1 into vmaxgenre from genre;
+        INSERT INTO genre VALUES(vmaxgenre, vgenrename);
+        DBMS_OUTPUT.PUT_LINE('Genre added!');
+    end if;
+END;
+/
+---Director------------------------------------------------------------------------------------
+CREATE or REPLACE PROCEDURE ADD_DIRECTOR(vdirectorfirstname VARCHAR, vdirectorlastname VARCHAR)
+IS
+    r_director director%ROWTYPE;
+    vmaxdirector number;
+BEGIN
+    ---first check if director name exists
+    select * into r_director from director where DIRECTORFIRSTNAME = vdirectorfirstname and DIRECTORLASTNAME = vdirectorlastname;
+    if r_director.directorid is not null then
+        DBMS_OUTPUT.PUT_LINE('Director exists');
+    else
+        select max(directorid)+1 into vmaxdirector from director;
+        INSERT INTO DIRECTOR VALUES(vmaxdirector, vdirectorfirstname, vdirectorlastname);
+        DBMS_OUTPUT.PUT_LINE('Director added!');
+    end if;
+END;
+/
+
+
+
+
