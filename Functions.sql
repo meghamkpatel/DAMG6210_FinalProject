@@ -66,3 +66,35 @@ EXCEPTION
 END;
 
 -------------------------------------------------------------------------
+
+CREATE OR REPLACE FUNCTION get_avg_rating_movie(p_movietitle IN VARCHAR2)
+RETURN NUMBER
+IS
+  v_avg_rating NUMBER;
+BEGIN
+  SELECT AVG(ratings) INTO v_avg_rating
+  FROM movie where movietitle=p_movietitle;
+  
+  RETURN v_avg_rating;
+END;
+
+---------------------------------------------------------------------------
+
+CREATE OR REPLACE FUNCTION get_movies(p_genre IN VARCHAR2)
+RETURN VARCHAR2
+IS
+  v_movies VARCHAR2(32767); -- increase the size of the variable
+BEGIN
+  v_movies := '';
+  FOR row IN (
+    SELECT movietitle 
+    FROM movie m
+    JOIN genre g ON m.genreID = g.genreID
+    WHERE genrename = p_genre
+  ) LOOP
+    v_movies := v_movies || row.movietitle || ' '; -- concatenate movie titles
+  END LOOP;
+  
+  RETURN v_movies;
+END;
+------------------------------------------------------------------------------
