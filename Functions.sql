@@ -20,27 +20,29 @@ END;
 CREATE OR REPLACE FUNCTION get_movie_recommendation(genre IN VARCHAR2)
 RETURN VARCHAR2
 IS
-Movie_recommendations;
+  Movie_recommendations varchar2(100);
 BEGIN
-SELECT DISTINCT m.MovieName
-FROM movie m
-JOIN (
-    SELECT genreName
-    FROM (
-        SELECT genreName, COUNT(*) as total_count
-        FROM movie
-        JOIN watch_history ON movie.movieId = watch_history.movieId
-        GROUP BY genre
+  Movie_recommendations:='';
+  for row in (
+    SELECT DISTINCT m.movietitle
+    FROM movie m
+    JOIN (
+        SELECT m.genreid, COUNT(*) as total_count
+        FROM movie m
+        INNER JOIN watch_history w ON m.movieId = w.movieId
+        GROUP BY m.genreid
         ORDER BY total_count DESC
         FETCH FIRST 3 ROWS ONLY
+    ) g ON m.genreid = g.genreid
+    WHERE m.movieId NOT IN (
+        SELECT movieId
+        FROM watch_history
     )
-) g ON m.genre = g.genre
-WHERE m.movieId NOT IN (
-    SELECT movieId
-    FROM watch_history
-)
-FETCH FIRST 10 ROWS ONLY;
-RETURN Movie_recommendations;
+    FETCH FIRST 10 ROWS ONLY
+  ) loop
+    Movie_recommendations:=Movie_recommendations || ' ' || row.movietitle;
+  end loop;
+  RETURN Movie_recommendations;
 END;
 
 ---------------------------------------------------------------------------
@@ -48,15 +50,15 @@ END;
 CREATE OR REPLACE FUNCTION is_customer_active (Ncustomer_id IN NUMBER)
 RETURN VARCHAR2
 IS
-    c_active VARCHAR2;
+    c_active VARCHAR2(20);
 BEGIN
     SELECT CASE
-        WHEN p.end_date >= SYSDATE THEN 'Active'
+        WHEN p.enddate >= SYSDATE THEN 'Active'
         ELSE 'Not Active'
     END INTO c_active
     FROM purchase p
-    JOIN customer c ON p.customer_id = c.customer_id
-    WHERE c.customer_id = p_customer_id  
+    JOIN customer c ON p.customerid = c.customerid
+    WHERE c.customerid = Ncustomer_id ; 
     RETURN c_active;
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
