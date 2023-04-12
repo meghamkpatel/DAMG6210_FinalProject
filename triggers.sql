@@ -1,20 +1,24 @@
 
 
-
 CREATE OR REPLACE TRIGGER update_status
 AFTER INSERT OR UPDATE ON Purchase
 FOR EACH ROW
 DECLARE
 Nend_date purchase.enddate%type;
+status varchar2(10);
 BEGIN
-SELECT max(enddate) into Nend_date 
+SELECT CASE
+WHEN MAX(enddate) > SYSDATE THEN 'Active' ELSE 'Inactive' 
+END CASE INTO status 
 FROM Purchase
-Where CustomerID = :new.customerID;
-IF Nend_date>= sysdate then set customerstatus = ‘Active’
-Where CustomerID = :new.customerID;
-Else
-Update customer
-Set customerstatus = ‘Inactive’
-Where CustomerID = :new.customerID;
-End if;
+WHERE CustomerID = :new.customerID;
+UPDATE customer
+SET customerstatus = status
+WHERE CustomerID = :new.customerID;
 End;
+
+
+
+
+
+
