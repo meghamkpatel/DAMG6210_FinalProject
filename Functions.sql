@@ -1,16 +1,13 @@
-CREATE OR REPLACE FUNCTION REGION_RESTRICTED_MOVIE(in_customer_id IN NUMBER, in_movie_id in NUMBER) IS
+CREATE OR REPLACE FUNCTION REGION_RESTRICTED_MOVIE1(in_customer_id IN NUMBER, in_movie_id in NUMBER) 
+Return VARCHAR2
+IS
   cust_region VARCHAR2(100);
   movie_region VARCHAR2(100);
   var_movie_id number;
 BEGIN
-    SELECT m.movieid INTO var_movie_id
-	FROM customer c 
-	JOIN address a ON a.CustomerID = c.CustomerID 
-	JOIN REGION r on r.regionname=a.country
-   	JOIN   Movie m ON m.movieid = r.movieid  
-	WHERE c.CustomerID = in_customer_id and m.movieid = in_movie_id;
-
-  IF var_movie_id is not null THEN
+    SELECT m.movieid INTO var_movie_id FROM customer c JOIN address a ON a.CustomerID = c.CustomerID JOIN REGION r ON r.regionname=a.country
+    JOIN   Movie m ON m.movieid = r.movieid  WHERE c.CustomerID = in_customer_id AND m.movieid = in_movie_id;
+  IF var_movie_id IS NOT null THEN
     DBMS_OUTPUT.PUT_LINE('Play Movie');
   ELSE
     DBMS_OUTPUT.PUT_LINE('Movie is not available in your Region');
