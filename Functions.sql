@@ -1,3 +1,5 @@
+
+
 CREATE OR REPLACE FUNCTION REGION_RESTRICTED_MOVIE1(in_customer_id IN NUMBER, in_movie_id in NUMBER) 
 Return VARCHAR2
 IS
@@ -20,7 +22,7 @@ END;
 CREATE OR REPLACE FUNCTION get_movie_recommendation(genre IN VARCHAR2)
 RETURN VARCHAR2
 IS
-  Movie_recommendations varchar2(100);
+  Movie_recommendations varchar2(3200)
 BEGIN
   Movie_recommendations:='';
   for row in (
