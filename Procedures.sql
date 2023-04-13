@@ -1,80 +1,98 @@
 --Procedures
-create or replace PROCEDURE CREATE_MOVIE (VARGenre VARCHAR,VARDirectorFirstName VARCHAR,VARDirectorLastName VARCHAR,VARMovieTitle VARCHAR,VARDateOfRelease NUMBER, VARMovieDuration NUMBER,VARMovieDescription VARCHAR,VARRatings FLOAT, VARCountryOrigin VARCHAR)
+create or replace PROCEDURE CREATE_MOVIE (
+    VARGenre genre.genrename%type,
+    VARDirectorFirstName director.DirectorFirstName%type,
+    VARDirectorLastName director.DirectorLastName%type,
+    VARMovieTitle movie.movietitle%type,
+    VARDateOfRelease movie.dateofrelease%type,
+    VARMovieDuration movie.movieduration%type,
+    VARMovieDescription movie.moviedescription%type,
+    VARRatings movie.ratings%type,
+    VARCountryOrigin movie.countryorigin%type)
 IS
     VARMAXMOVIEID NUMBER;
     VARGENREID NUMBER;
     VARDIRECTORID NUMBER;
 
 BEGIN
-    FOR aRow IN (SELECT GENREID
-       FROM GENRE
-       WHERE GENRENAME = VARGenre)
-    LOOP
-        IF aRow.GENREID IS NULL THEN
-            SELECT MAX(GENREID)+1 INTO VARGENREID from GENRE;
-            INSERT INTO GENRE (GenreID, GenreName) VALUES (VARGENREID, VARGenre);
-            DBMS_OUTPUT.PUT_LINE('Genre ' || VARGenre || ' created!');
-        END IF;
-    END LOOP;
-    Select MAX(MOVIEID)+1 into VARMAXMOVIEID from MOVIE;
-    SELECT MAX(DIRECTORID)+1 into VARDIRECTORID from DIRECTOR;
-    INSERT INTO DIRECTOR VALUES(VARDIRECTORID, VARDirectorFirstName, VARDirectorLastName);
-    INSERT INTO MOVIE VALUES(VARMAXMOVIEID,VARGENREID,VARDIRECTORID, VARMovieTitle, VARDateOfRelease,VARMovieDuration, VARMovieDescription, VARRatings, VARCountryOrigin);
-    dbms_output.put_line('Movie ' || VARMovieTitle || ' added!');
-END;
-/
----------------------------------------------------------
+    begin 
+        select genreid into VARGENREID from genre where lower(VARGenre) = lower(genrename);
+    exception
+        when no_data_found then
+            INSERT INTO GENRE (GenreID, GenreName) VALUES (genre_seq.nextval, VARGenre);
+            VARGENREID := genre_seq.nextval;
+    end;
 
-create or replace PROCEDURE GET_MY_PROFILE (varusername IN varchar, varpassword in VARCHAR, CustomerName OUT VARCHAR, CustomerEmail OUT VARCHAR, CustomerUserName OUT VARCHAR, CustomerStatus OUT VARCHAR)
-IS  
-BEGIN
-    FOR aRow IN (SELECT CUSTOMERID
-       FROM CUSTOMER
-       WHERE varusername = USERNAME and varpassword = USERPASSWORD)
-    LOOP
-        IF aRow.CUSTOMERID IS NULL THEN
-            DBMS_OUTPUT.PUT_LINE('oops! username or password does not correct');
-        ELSE 
-            SELECT userfirstname || ' ' || userlastname, email, username, customerstatus
-            INTO CustomerName, CustomerEmail, CustomerUserName, CustomerStatus
-            FROM Customer
-            WHERE customerid = aRow.CUSTOMERID;   
-        END IF;
-    END LOOP;
+    begin 
+        select directorid into VARDIRECTORID from director where lower(VARDirectorFirstName) = lower(DirectorFirstName) and lower(VARDirectorLastName) = lower(DirectorLastName);
+    exception
+        when no_data_found then
+            INSERT INTO director VALUES (director_seq.nextval, VARDirectorFirstName, VARDirectorLastName);
+            VARDIRECTORID := director_seq.nextval;
+    end;
+    
+    begin 
+        select movieid into VARMAXMOVIEID from movie where lower(VARMovieTitle) = lower(movietitle) and lower(VARDateOfRelease) = lower(DateOfRelease);
+            dbms_output.put_line('Movie ' || VARMovieTitle || ' already exisits!');
+    exception
+        when no_data_found then
+            INSERT INTO MOVIE VALUES(movie_seq.nextval,VARGENREID,VARDIRECTORID, VARMovieTitle, VARDateOfRelease,VARMovieDuration, VARMovieDescription, VARRatings, VARCountryOrigin);
+            dbms_output.put_line('Movie ' || VARMovieTitle || ' added!');
+    end;
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
 END;
 /
----------------------------------------------------------
-create or replace PROCEDURE CHANGE_CUSTOMER_DETAIL (varusername IN varchar, varpassword in VARCHAR, varEmail IN varchar, CustomerName OUT VARCHAR, CustomerEmail OUT VARCHAR, CustomerUserName OUT VARCHAR, CustomerStatus OUT VARCHAR)
+
+--------------------------------------------------------- 
+create or replace PROCEDURE CHANGE_CUSTOMER_DETAIL (
+    varusername customer.username%type, 
+    varpassword customer.userpassword%type, 
+    varEmail customer.email%type)
 IS
+    VARUSER CUSTOMER%rowtype;
 BEGIN
-    FOR aRow IN (SELECT userfirstname || ' ' || userlastname, email, username, customerstatus into CustomerName, CustomerEmail, CustomerUserName, CustomerStatus 
-       FROM CUSTOMER
-       WHERE varusername = USERNAME and varpassword = USERPASSWORD)
-    LOOP
-        IF aRow.EMAIL IS NULL THEN
-            DBMS_OUTPUT.PUT_LINE('username or password does not exist');
-            ELSE IF varEmail is not NULL then
-                UPDATE CUSTOMER SET EMAIL = varEmail;
+    begin 
+        select * into VARUSER from customer where lower(varusername) = lower(username);
+        if lower(varpassword) <> lower(VARUSER.userpassword) then
+            DBMS_OUTPUT.PUT_LINE('Incorrect password');
+        else 
+            IF varEmail is not NULL then
+                UPDATE CUSTOMER SET EMAIL = varEmail where customerid = VARUSER.customerid;
                 DBMS_OUTPUT.PUT_LINE('Email changed!');
                 ELSE IF varusername is not NULL then
                     UPDATE CUSTOMER SET USERNAME = varUsername;
                     DBMS_OUTPUT.PUT_LINE('Username changed!');
                 End IF; 
-            END IF;
-        END IF;
-    END LOOP;
+            end if;
+        end if;
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('User not found.');
+    end;
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
 END;
 /
-
-create or replace PROCEDURE CREATE_CUSTOMER(vUserFirstName VARCHAR, vUserLastName VARCHAR,vEmail VARCHAR,vDateOfBirth DATE,vGender VARCHAR, vUsername VARCHAR,vUserPassword VARCHAR)
+---------------------------------------------------------------------------------------------------------
+create or replace PROCEDURE CREATE_CUSTOMER(
+    vUserFirstName customer.userfirstname%type, 
+    vUserLastName customer.userlastname%type,
+    vEmail customer.email%type,
+    vDateOfBirth customer.dateofbirth%type,
+    vGender customer.gender%type, 
+    vUsername customer.username%type,
+    vUserPassword customer.userpassword%type)
 IS
-varmaxcustomer number;
+varcustomerid number;
 BEGIN
-    FOR aRow IN (SELECT *
-       FROM CUSTOMER
-       WHERE Username = vUsername or Email = vEmail)
-    LOOP
-        IF aRow.customerid IS NULL THEN
+    begin 
+        select customerid into varcustomerid from customer where lower(vEmail) = lower(email) or lower(vUsername) = lower(username);
+        DBMS_OUTPUT.PUT_LINE('Email or username is already in use. Please try another.');        
+    exception
+        when no_data_found then
             case
                 when vEmail = '' or vEmail LIKE '_%@__%.__%' then
                     DBMS_OUTPUT.PUT_LINE('Please enter correct email!');
@@ -91,141 +109,119 @@ BEGIN
                 when vUserpassword = '' then
                     DBMS_OUTPUT.PUT_LINE('Password is required!');
                 else     
-                    SELECT MAX(customerid+1) into varmaxcustomer from customer;
-                    INSERT INTO CUSTOMER VALUES(varmaxcustomer, vUserFirstName, vUserLastName,vEmail, vDateOfBirth, vGender, vUsername, vUserPassword,'NOT ACTIVE', sysdate);
-                    DBMS_OUTPUT.PUT_LINE('Customer profile created!');
+                    INSERT INTO CUSTOMER VALUES(customer_seq.nextval, vUserFirstName, vUserLastName,vEmail, vDateOfBirth, vGender, vUsername, vUserPassword,'NOT ACTIVE', sysdate);
+                    DBMS_OUTPUT.PUT_LINE('Customer profile created! Welcome ' || vUserFirstName || ' ' || vUserLastName);
             END CASE;
-        end if;
-    END LOOP;  
+    end;
 END;
 /
 
 ----ADD A MOVIE TO WATCHLIST
 ------------------------------------------------------------------------------ toggle
-CREATE OR REPLACE PROCEDURE TOGGLE_WATCHLIST(in_movie_id NUMBER, in_customer_id NUMBER) IS
+CREATE OR REPLACE PROCEDURE TOGGLE_WATCHLIST(
+    in_movie_id watchlist.movieid%type,
+    in_customer_id watchlist.customerid%type)
+IS
   r_watchlist Watchlist%ROWTYPE;
 BEGIN
   -- Check if movie is already in customer watchlist
-  SELECT * INTO r_watchlist FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-
-  IF r_watchlist.CustomerID IS NULL THEN
-    -- Movie is not in watchlist, add it
-    INSERT INTO Watchlist(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
-    DBMS_OUTPUT.PUT_LINE('Movie added to watchlist successfully');
-  ELSE
-    -- Movie is already in watchlist
-    DELETE FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-    DBMS_OUTPUT.PUT_LINE('Movie is removed from watchlist');
-  END IF;
+    begin 
+        SELECT * INTO r_watchlist FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DELETE FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DBMS_OUTPUT.PUT_LINE('Movie is removed from watchlist');
+    exception
+        when no_data_found then
+            INSERT INTO Watchlist(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
+            DBMS_OUTPUT.PUT_LINE('Movie added to watchlist successfully');
+    end;
 EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
 /
 --------------------------------------------------------------------------------
-CREATE OR REPLACE PROCEDURE TOGGLE_DOWNLOAD(in_movie_id NUMBER, in_customer_id NUMBER) IS
+CREATE OR REPLACE PROCEDURE TOGGLE_DOWNLOAD(
+    in_movie_id download.movieid%type,
+    in_customer_id download.customerid%type) 
+IS
 	r_download Download%ROWTYPE;
 BEGIN
----- check if movie is already in customer download
-SELECT * INTO r_download FROM Download WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-
-IF r_download.CustomerID IS NULL THEN
-    -- Movie is not in download, add it
-    INSERT INTO Download(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
-    DBMS_OUTPUT.PUT_LINE('Downloading');
-  ELSE
-    -- Movie is already in Download
-    DELETE FROM Download WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-    DBMS_OUTPUT.PUT_LINE('Movie is removed from download list');
-  END IF;
+    begin 
+        SELECT * INTO r_download FROM Download WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DELETE FROM Download WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DBMS_OUTPUT.PUT_LINE('Movie is removed from download list');
+    exception
+        when no_data_found then
+            INSERT INTO Download(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
+            DBMS_OUTPUT.PUT_LINE('Downloading');
+    end;
 EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
 ---------------------------------------------------------------------------------------------- change this to toggle from add to remove
-CREATE OR REPLACE PROCEDURE TOGGLE_FAVORITE(in_movie_id NUMBER, in_customer_id NUMBER) IS
+CREATE OR REPLACE PROCEDURE TOGGLE_FAVORITE(
+    in_movie_id favorite.movieid%type,
+    in_customer_id favorite.customerid%type) 
+IS
 	r_favorite Favorite%ROWTYPE;
 BEGIN
+    begin 
+        --SELECT * INTO r_favorite FROM Favorite WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        delete from Favorite WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DBMS_OUTPUT.PUT_LINE('Movie is removed from favorite list');
+    exception
+        when no_data_found then
+            INSERT INTO Favorite(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
+            DBMS_OUTPUT.PUT_LINE('Added in favorite list');
+    end;
 ---- check if movie is already in customer favorite
-SELECT * INTO r_favorite FROM Favorite WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-
-IF r_favorite.CustomerID IS NULL THEN
-    -- Movie is not in favorite, add it
-    INSERT INTO Favorite(CustomerID, MovieID) VALUES (in_customer_id, in_movie_id);
-    DBMS_OUTPUT.PUT_LINE('Added in favorite list');
-ELSE
-    -- Movie is already in favorite list
-    delete from Favorite WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-    DBMS_OUTPUT.PUT_LINE('Movie is removed from favorite list');
-END IF;
 EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
 /
---------------------------------------------------------------------------
-CREATE OR REPLACE PROCEDURE REGION_RESTRICTED_MOVIE(in_customer_id IN NUMBER, in_movie_id in NUMBER) IS
-  cust_region VARCHAR2(100);
-  movie_region VARCHAR2(100);
-  var_movie_id number;
-BEGIN
-    SELECT m.movieid INTO var_movie_id FROM customer c JOIN address a ON a.CustomerID = c.CustomerID JOIN REGION r on r.regionname=a.country
-    JOIN   Movie m ON m.movieid = r.movieid  WHERE c.CustomerID = in_customer_id and m.movieid = in_movie_id;
 
-  IF var_movie_id is not null THEN
-    INSERT INTO watch_history values((select max(historyid)+1 from watch_history), in_movie_id, in_customer_id, sysdate());
-    DBMS_OUTPUT.PUT_LINE('Play Movie');
-  ELSE
-    DBMS_OUTPUT.PUT_LINE('Movie is not available in your Region');
-  END IF;
-END;
-/
 -------------------------------------------------------------------------------
-CREATE OR REPLACE PROCEDURE ADD_TO_WATCHHISTORY(in_movie_id NUMBER, in_customer_id NUMBER, in_watchtime Date) IS
-  r_movie Watch_history%ROWTYPE;
-  var_hisid number;
-  r_list Watchlist%ROWTYPE;
-  
+CREATE OR REPLACE PROCEDURE ADD_TO_WATCHHISTORY(
+    in_movie_id watch_history.movieid%type,
+    in_customer_id watch_history.customerid%type) 
+IS
+  varmovieid number;
+  varwatchid number;
 BEGIN
-    SELECT * INTO r_movie FROM Watch_history WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-    IF r_movie.CustomerID IS NULL THEN
-        -- Movie is not in download, add it
-        select max(w.historyid) into var_hisid from watch_history w;
-        var_hisid:=var_hisid+1;
-        INSERT INTO watch_history(historyid,CustomerID, MovieID,datewatched) VALUES (var_hisid,in_customer_id, in_movie_id,in_watchtime);
-        DBMS_OUTPUT.PUT_LINE('Playing...');
-        -- check if movie was in watchlist and remove it
-        SELECT * INTO r_list FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-        IF r_list.CustomerID IS NULL THEN
-            delete from watchlist where MovieID = in_movie_id AND CustomerID = in_customer_id;
-        END IF;
-    ELSE
-        -- Movie is already in Download
-        Update watch_history set datewatched = in_watchtime WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
-        DBMS_OUTPUT.PUT_LINE('Starting from where we left off..');
-    END IF;
+    begin 
+        Update watch_history set datewatched = sysdate WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+        DBMS_OUTPUT.PUT_LINE('Starting from where we left off...');
+    exception
+        when no_data_found then
+            INSERT INTO watch_history VALUES(watchhistory_seq.nextval,in_movie_id,in_customer_id,sysdate);
+            DBMS_OUTPUT.PUT_LINE('Playing...');
+            -- check if movie was in watchlist and remove it
+            begin 
+                SELECT watchlistid INTO varwatchid FROM Watchlist WHERE MovieID = in_movie_id AND CustomerID = in_customer_id;
+                delete from watchlist where MovieID = in_movie_id AND CustomerID = in_customer_id;
+                DBMS_OUTPUT.PUT_LINE('Removed from watchlist');
+            end;
+    end;
 EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
+/
 -------------------------------------------------------------------------------------------------------------
-create or replace PROCEDURE Add_Address(vEmail VARCHAR, vAddress1 VARCHAR, vAddress2 VARCHAR, vCity VARCHAR, vState VARCHAR, vCountry VARCHAR, vPincode VARCHAR)
+create or replace PROCEDURE Add_Address(
+    vEmail customer.email%type, 
+    vAddress1 address.address1%type, 
+    vAddress2 address.address2%type, 
+    vCity address.city%type, 
+    vState address.state%type, 
+    vCountry address.country%type, 
+    vPincode address.pincode%type)
 IS
-    r_customer customer%ROWTYPE;
-    varmaxcustomer number;
+    varcustomerid number;
 BEGIN
----first find customer
-select * into r_customer from customer where email = vEmail;
-if r_customer.customerid is null then 
-    DBMS_OUTPUT.PUT_LINE('Please create a customer profile first.');
-else 
----check if customer already has address
-    --if yes update addess
-    --if no create new address
-    FOR aRow IN (SELECT *
-       FROM ADDRESS
-       WHERE customerid = r_customer.customerid)
-    LOOP
+---first find customer  
     case
         when vEmail = '' then
             DBMS_OUTPUT.PUT_LINE('Customer not found');
@@ -242,33 +238,34 @@ else
         when vPincode = '' then
             DBMS_OUTPUT.PUT_LINE('Pincode is required');
         END CASE;
-        IF aRow.customerid IS NULL THEN -- creating new address
-            INSERT INTO ADDRESS VALUES(aRow.customerid, vAddress1, vAddress2,vCity, vState, vCountry, vPincode);
-            DBMS_OUTPUT.PUT_LINE('Address created!');
-        ELSE 
-            UPDATE ADDRESS SET Address1 = vAddress1, Address2 = Address2, City = vCity, State = vState, Country = vCountry, Pincode = vPincode WHERE customerid = aRow.customerid;
-        end if;
-    END LOOP; 
-END IF;
+    begin
+        select customerid into varcustomerid from customer where email = vEmail;
+        begin
+            --SELECT * FROM ADDRESS WHERE customerid = varcustomerid;
+            UPDATE ADDRESS SET Address1 = vAddress1, Address2 = vAddress2, City = vCity, State = vState, Country = vCountry, Pincode = vPincode WHERE customerid = varcustomerid;
+            DBMS_OUTPUT.PUT_LINE('Address updated!');
+        exception
+            when no_data_found then
+                INSERT INTO ADDRESS VALUES(varcustomerid, vAddress1, vAddress2,vCity, vState, vCountry, vPincode);
+                DBMS_OUTPUT.PUT_LINE('Address created!');
+        end;
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Please create a customer profile first.');
+    end;
+  
 END;
+/
 ---------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_SUBTITLE(vMovieName VARCHAR, vWords VARCHAR, vLang VARCHAR)
+CREATE or REPLACE PROCEDURE ADD_SUBTITLE(
+    vMovieName movie.movietitle%type, 
+    vWords subtitles.text%type, 
+    vLang subtitles.language%type)
 IS
     r_movie movie%ROWTYPE;
     vmaxsubid number;
 BEGIN
 ---first find movie
-select * into r_movie from movie where movietitle = vMovieName;
-if r_movie.movieid is null then 
-    DBMS_OUTPUT.PUT_LINE('Please add a movie first.');
-else 
----check if movie already has subtitle for language
-    --if yes update text
-    --if no create new subtitle
-    FOR aRow IN (SELECT *
-       FROM subtitles
-       WHERE movieid = r_movie.movieid and language = vLang)
-    LOOP
     case
         when vMovieName = '' then
             DBMS_OUTPUT.PUT_LINE('Movie not found');
@@ -276,110 +273,127 @@ else
             DBMS_OUTPUT.PUT_LINE('Text is required');
         when vLang = '' then
             DBMS_OUTPUT.PUT_LINE('Language is required');
-        END CASE;
-        select max(subtitlesid)+1 into vmaxsubid from subtitles;
-        IF aRow.subtitlesid IS NULL THEN -- creating new subtitle
-            INSERT INTO Subtitles VALUES(vmaxsubid, vMovieName, vWords,vLang);
-            DBMS_OUTPUT.PUT_LINE('Subtitle added!');
-        ELSE 
-            UPDATE Subtitles SET Text = vWords WHERE subtitlesid = aRow.subtitlesid;
+    END CASE;
+    begin
+        select * into r_movie from movie where movietitle = vMovieName;
+        begin
+            UPDATE Subtitles SET Text = vWords WHERE subtitlesid = (SELECT subtitlesid FROM subtitles WHERE movieid = r_movie.movieid and language = vLang);
             DBMS_OUTPUT.PUT_LINE('Subtitle updated!');
-        end if;
-    END LOOP; 
-END IF;
+        exception
+            when no_data_found then
+                INSERT INTO Subtitles VALUES(subtitle_seq.nextval, vMovieName, vWords,vLang);
+                DBMS_OUTPUT.PUT_LINE('Subtitle added!');
+        end;
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Please add a movie first.');
+    end;
+---check if movie already has subtitle for language
+    --if yes update text
+    --if no create new subtitle
 END;
 /
 --------------------------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_ACTOR(vfirstname VARCHAR, vlastname VARCHAR)
+CREATE or REPLACE PROCEDURE ADD_ACTOR(
+    vfirstname actor.actorfirstname%type, 
+    vlastname actor.actorlastname%type)
 IS
     r_actor actor%ROWTYPE;
     vmaxactor number;
 BEGIN
     ---first check if actor name exists
-    select * into r_actor from actor where ACTORFIRSTNAME = vfirstname and ACTORLASTNAME = vlastname;
-    if r_actor.actorid is not null then
-        DBMS_OUTPUT.PUT_LINE('Actor exists');
-    else
-        select max(actorid)+1 into vmaxactor from actor;
-        INSERT INTO ACTOR VALUES(vmaxactor, vfirstname, vlastname);
-        DBMS_OUTPUT.PUT_LINE('Actor added!');
-    end if;
+    begin 
+        select * into r_actor from actor where ACTORFIRSTNAME = vfirstname and ACTORLASTNAME = vlastname;
+        DBMS_OUTPUT.PUT_LINE('Actor exists already');
+    exception
+        when no_data_found then
+            INSERT INTO ACTOR VALUES(actor_seq.nextval, vfirstname, vlastname);
+            DBMS_OUTPUT.PUT_LINE('Actor added!');
+    end;
+        
 END;
 /
 ------------------------------------------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_SUBSCRIPTION_PLAN(vplanname VARCHAR, vplandescription VARCHAR, vscreenlimit NUMBER)
+CREATE or REPLACE PROCEDURE ADD_SUBSCRIPTION_PLAN(
+    vplanname subscription_plan.planid%type, 
+    vplandescription subscription_plan.plandescription%type, 
+    vscreenlimit subscription_plan.screenlimit%type)
 IS
     r_plan subscription_plan%ROWTYPE;
     vmaxplan number;
 BEGIN
     ---first check if plan exists
-    select * into r_plan from subscription_plan where planname = vplanname;
-    
-    if r_plan.planid is not null then
+    begin
+        select * into r_plan from subscription_plan where planname = vplanname;
         DBMS_OUTPUT.PUT_LINE('Plan already exists.');
-    else
-        select max(planid)+1 into vmaxplan from subscription_plan;
-        INSERT INTO subscription_plan VALUES(vmaxplan, vplanname, vplandescription, vscreenlimit);
-        DBMS_OUTPUT.PUT_LINE('Plan added!');
-    end if;
+    exception
+        when no_data_found then
+            INSERT INTO subscription_plan VALUES(plan_seq.nextval, vplanname, vplandescription, vscreenlimit);
+            DBMS_OUTPUT.PUT_LINE('Plan added!');
+    end;
 END;
 /
 
 -----region-------------------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_REGION (vcountryname VARCHAR)
+CREATE or REPLACE PROCEDURE ADD_REGION (
+vcountryname region.regionname%type,
+vmovietitle movie.movietitle%type)
 IS
     r_region region%ROWTYPE;
-    vmaxregion number;
+    varmovieid number;
 BEGIN
     ---first check if region exists
-    select * into r_region from region where countryname = vcountryname;
-    
-    if r_region.regionid is not null then
-        DBMS_OUTPUT.PUT_LINE('Region already exists.');
-    else
-        select max(regionid)+1 into vmaxregion from region;
-        INSERT INTO region VALUES(vmaxregion, vcountryname);
-        DBMS_OUTPUT.PUT_LINE('Region added!');
-    end if;
+    begin
+        select movieid into varmovieid from movie where movietitle = vmovietitle;
+        begin
+            select * into r_region from region where regionname = vcountryname and movieid = varmovieid; 
+            DBMS_OUTPUT.PUT_LINE('Movie already exists for this region.');
+        exception
+            when no_data_found then
+                INSERT INTO region VALUES(region_seq.nextval, varmovieid, vcountryname);
+                DBMS_OUTPUT.PUT_LINE('Region added!');
+        end;
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Movie title does not exist!');
+    end;
 END;
 /
 
 -----Genre--------------------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_Genre (vgenrename VARCHAR)
+CREATE or REPLACE PROCEDURE ADD_Genre (vgenrename genre.genrename%type)
 IS
     r_genre genre%ROWTYPE;
     vmaxgenre number;
 BEGIN
     ---first check if genre exists
-    select * into r_genre from region where genrename = vgenrename;
-    
-    if r_genre.genreid is not null then
+    begin
+        select * into r_genre from genre where genrename = vgenrename;
         DBMS_OUTPUT.PUT_LINE('Genre already exists.');
-    else
-        select max(genreid)+1 into vmaxgenre from genre;
-        INSERT INTO genre VALUES(vmaxgenre, vgenrename);
-        DBMS_OUTPUT.PUT_LINE('Genre added!');
-    end if;
+    exception
+        when no_data_found then
+            INSERT INTO genre VALUES(genre_seq.nextval, vgenrename);
+            DBMS_OUTPUT.PUT_LINE('Genre added!');
+    end;
+    
 END;
 /
----Director------------------------------------------------------------------------------------
-CREATE or REPLACE PROCEDURE ADD_DIRECTOR(vdirectorfirstname VARCHAR, vdirectorlastname VARCHAR)
+---Director----------------------------------------------------------------------------f--------
+CREATE or REPLACE PROCEDURE ADD_DIRECTOR(
+    vdirectorfirstname director.directorfirstname%type, 
+    vdirectorlastname director.directorlastname%type)
 IS
     r_director director%ROWTYPE;
-    vmaxdirector number;
+    vdirectorid number;
 BEGIN
     ---first check if director name exists
-    select * into r_director from director where DIRECTORFIRSTNAME = vdirectorfirstname and DIRECTORLASTNAME = vdirectorlastname;
-    if r_director.directorid is not null then
-        DBMS_OUTPUT.PUT_LINE('Director exists');
-    else
-        select max(directorid)+1 into vmaxdirector from director;
-        INSERT INTO DIRECTOR VALUES(vmaxdirector, vdirectorfirstname, vdirectorlastname);
-        DBMS_OUTPUT.PUT_LINE('Director added!');
-    end if;
+    begin
+        select directorid into vdirectorid from director where DIRECTORFIRSTNAME = vdirectorfirstname and DIRECTORLASTNAME = vdirectorlastname;
+        DBMS_OUTPUT.PUT_LINE('Director exists already.');
+    exception
+        when no_data_found then
+            INSERT INTO DIRECTOR VALUES(director_seq.nextval, vdirectorfirstname, vdirectorlastname);
+            DBMS_OUTPUT.PUT_LINE('Director added!');
+    end;
 END;
 /
-
-
-
-
