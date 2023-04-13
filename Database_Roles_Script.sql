@@ -66,6 +66,11 @@ GRANT SELECT, INSERT, UPDATE ON db_admin.watch_history TO DB_MANAGER;
 GRANT SELECT, INSERT, UPDATE ON db_admin.watchlist TO DB_MANAGER;
 GRANT SELECT,INSERT, UPDATE ON db_admin.customer TO DB_MANAGER;
 
+--creating indexes
+CREATE INDEX idx_genre_name ON genre (genreName);
+Create index inx_movie_id ON watch_history (movieID);
+CREATE INDEX inx_movie_Title on Movie (movieTitle);
+
 create sequence movie_seq;
 create sequence customer_seq;
 create sequence genre_seq;
