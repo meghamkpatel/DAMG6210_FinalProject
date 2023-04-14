@@ -47,39 +47,6 @@ BEGIN
   RETURN Movie_recommendations;
 END;
 
----------------------------------------------------------------------------
-/
-CREATE OR REPLACE FUNCTION is_customer_active (Ncustomer_id IN NUMBER)
-RETURN VARCHAR2
-IS
-    c_active VARCHAR2(20);
-BEGIN
-    SELECT CASE
-        WHEN p.enddate >= SYSDATE THEN 'ACTIVE'
-        ELSE 'NOT ACTIVE'
-    END INTO c_active
-    FROM purchase p
-    JOIN customer c ON p.customerid = c.customerid
-    WHERE c.customerid = Ncustomer_id ; 
-    RETURN c_active;
-EXCEPTION
-    WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('Invalid customer ID');
-END;
-/
--------------------------------------------------------------------------
-/
-CREATE OR REPLACE FUNCTION get_avg_rating_movie(p_movietitle IN VARCHAR2)
-RETURN NUMBER
-IS
-  v_avg_rating NUMBER;
-BEGIN
-  SELECT AVG(ratings) INTO v_avg_rating
-  FROM movie where movietitle=p_movietitle;
-  
-  RETURN v_avg_rating;
-END;
-/
 -------------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION get_actormovies(p_actor IN VARCHAR2)   ------done1
 RETURN VARCHAR2
