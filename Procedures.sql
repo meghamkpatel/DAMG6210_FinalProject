@@ -586,31 +586,12 @@ EXCEPTION
     dbms_output.put_line(sqlerrm);
 END;
 /
---delete movie;
-create or replace PROCEDURE Update_MOVIE_ratings (
-    VARMovieTitle movie.movietitle%type)
-IS
-    VARMAXMOVIEID NUMBER;
-BEGIN
-    case
-        when VARMovieTitle = '' or VARMovieTitle is null then
-            DBMS_OUTPUT.PUT_LINE('Movie Title is required');
-        else           
-            begin 
-                select movieid into VARMAXMOVIEID from movie where movietitle = VARMovieTitle;
-                delete movie where movieid = VARMAXMOVIEID;
-                dbms_output.put_line('Movie ' || VARMovieTitle || ' deleted!');
-            exception
-                when no_data_found then
-                    dbms_output.put_line('Movie ' || VARMovieTitle || ' not found!');
-            end;
-    END CASE;
-    
-EXCEPTION
- when others then
-    dbms_output.put_line(sqlerrm);
-END;
+execute Update_MOVIE_ratings('cats', 1.0);
+execute Update_MOVIE_ratings('this should show an error', 1.0);
+execute Update_MOVIE_ratings('cats', NULL);
+execute Update_MOVIE_ratings('', 1.0);
 /
+
 --update actor names;
 CREATE or REPLACE PROCEDURE Update_ACTOR(
     vactorid actor.actorid%type,
@@ -640,60 +621,14 @@ BEGIN
     end case;    
 END;
 /
---delete actor
-CREATE or REPLACE PROCEDURE DELETE_ACTOR(
-    vactorid actor.actorid%type,
-    vfirstname actor.actorfirstname%type, 
-    vlastname actor.actorlastname%type)
-IS
-    r_actor actor%ROWTYPE;
-    vmaxactor number;
-BEGIN
-    ---first check if actor name exists
+execute Update_ACTOR(301, 'Harry', 'Potter');
+execute Update_ACTOR(301, 'Professor', 'Naveen');
+execute Update_ACTOR(NULL, 'Harry', 'Potter');
+execute Update_ACTOR(302, 'Harry', 'Potter');
+execute Update_ACTOR(301, 'Harry Potter', '');
+execute Update_ACTOR(301, NULL, 'Potter');
+/
 
-    begin 
-        select * into r_actor from actor where actorid = vactorid or (ACTORFIRSTNAME = vfirstname and ACTORLASTNAME = vlastname);
-        delete actor where actorid = r_actor.actorid;
-        DBMS_OUTPUT.PUT_LINE('Actor ' || r_actor.ACTORFIRSTNAME || '  ' || r_actor.ACTORLASTNAME || ' is deleted');
-    exception
-        when no_data_found then
-            DBMS_OUTPUT.PUT_LINE('Actor does not exist!');
-    end;
-END;
-/
---customer delete
-create or replace PROCEDURE DELETE_CUSTOMER(--make customer NOT ACTIVE, and change purchase end date to today
-    vUsername customer.username%type,
-    vUserPassword customer.userpassword%type
-    )
-IS
-    VARUSER CUSTOMER%rowtype;
-BEGIN
-    case
-        when vUsername = '' or vUsername is null then
-            DBMS_OUTPUT.PUT_LINE('Username is required');
-        when vUserPassword = '' or vUserPassword is null then
-            DBMS_OUTPUT.PUT_LINE('Password is required');
-        else
-            begin 
-                select * into VARUSER from customer where lower(vUsername) = lower(username);
-                if vUserPassword <> VARUSER.userpassword then
-                    DBMS_OUTPUT.PUT_LINE('Incorrect password');
-                else 
-                    UPDATE CUSTOMER SET CUSTOMERSTATUS = 'NOT ACTIVE' where customerid = VARUSER.customerid;
-                    UPDATE PURCHASE SET ENDDATE = sysdate where customerid = VARUSER.customerid and startdate = (select max(startdate) from purchase where customerid = VARUSER.customerid); 
-                    DBMS_OUTPUT.PUT_LINE('Customer ' || VARUSER.userfirstname || ' ' || VARUSER.userlastname || ' successfully cancelled their subsription.');
-                end if;
-            exception
-                when no_data_found then
-                    DBMS_OUTPUT.PUT_LINE('User not found.');
-            end;
-        end case;
-EXCEPTION
- when others then
-    dbms_output.put_line(sqlerrm);
-END;
-/
 --director delete
 CREATE or REPLACE PROCEDURE DELETE_DIRECTOR(
     vdirectorid number)
@@ -715,6 +650,9 @@ BEGIN
             end;  
     end case;
 END;
+/
+
+---TO DO!!!!!!
 /
 --director update
 CREATE or REPLACE PROCEDURE Update_DIRECTOR(
@@ -747,6 +685,8 @@ BEGIN
     end case;
 END;
 /
+-- TO DOOO!!!!!!!
+/
 --genre delete
 CREATE or REPLACE PROCEDURE delete_Genre (vgenrename genre.genrename%type)
 IS
@@ -775,6 +715,11 @@ BEGIN
     end case;
 END;
 /
+execute DELETE_Genre('Scary!');
+execute DELETE_Genre('Scary!');
+execute DELETE_Genre('');
+execute DELETE_Genre(NULL);
+/
 --add cast
 CREATE OR REPLACE PROCEDURE ADD_CAST(
     in_movie_id movie_cast.movieid%type,
@@ -794,6 +739,14 @@ EXCEPTION
   WHEN NO_DATA_FOUND THEN
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
+/
+select max(actorid) from actor;
+execute add_cast(602, 301);
+execute add_cast(602, 300);
+execute add_cast(602, 305);
+execute add_cast(662, 301);
+execute add_cast(662, '');
+execute add_cast(NULL, 301);
 /
 --delete cast
 CREATE OR REPLACE PROCEDURE DELETE_CAST(
@@ -815,6 +768,37 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
 END;
 /
+execute DELETE_CAST(602, 301);
+execute DELETE_CAST(602, 305);
+execute DELETE_CAST(602, 299);
+execute DELETE_CAST('', 305);
+execute DELETE_CAST(602, NULL);
+/
+--delete actor
+CREATE or REPLACE PROCEDURE DELETE_ACTOR(
+    vactorid actor.actorid%type)
+IS
+    r_actor actor%ROWTYPE;
+    vmaxactor number;
+BEGIN
+    ---first check if actor name exists
+
+    begin 
+        select * into r_actor from actor where actorid = vactorid;
+        delete actor where actorid = r_actor.actorid;
+        DBMS_OUTPUT.PUT_LINE('Actor ' || r_actor.ACTORFIRSTNAME || '  ' || r_actor.ACTORLASTNAME || ' is deleted');
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Actor does not exist!');
+    end;
+END;
+/
+execute DELETE_ACTOR(301);
+execute DELETE_ACTOR(301);
+execute DELETE_ACTOR(302);
+execute DELETE_ACTOR(NULL);
+execute DELETE_ACTOR('');
+/
 --add purchase
 CREATE OR REPLACE PROCEDURE CREATE_PURCHASE(
     vplanname subscription_plan.planname%type,
@@ -835,8 +819,8 @@ BEGIN
             DBMS_OUTPUT.PUT_LINE('Plan Name is required');
         else
             begin --check if plan exists
-                select * into r_customer from customer where lower(vcustomerusername) = lower(vcustomerusername);
-                if lower(vcustomerpassword) <> lower(r_customer.userpassword) then
+                select * into r_customer from customer where lower(username) = lower(vcustomerusername);
+                if vcustomerpassword <> r_customer.userpassword then
                     DBMS_OUTPUT.PUT_LINE('Incorrect password');
                 else 
                     begin
@@ -865,9 +849,14 @@ EXCEPTION
     DBMS_OUTPUT.PUT_LINE('Invalid plan or customer ID');
 END;
 /
+execute create_purchase('family discount', 'meghamillions123', 'panda');
+execute create_purchase('family discount', 'millions123', 'panda');
+execute create_purchase('this should fail', 'meghamillions123', 'panda');
+execute create_purchase('family discount', 'meghamillions123', 'please');
+/
 --delete region
 CREATE or REPLACE PROCEDURE DELETE_MOVIE_FROM_REGION (
-vregionid region.regionid%type,
+vregionname region.regionname%type,
 vmovietitle movie.movietitle%type)
 IS
     r_region region%ROWTYPE;
@@ -875,16 +864,16 @@ IS
 BEGIN
     ---first check if region exists
     case
-        when vregionid = '' or vregionid is null then
-            DBMS_OUTPUT.PUT_LINE('Region ID is required');
+        when vregionname = '' or vregionname is null then
+            DBMS_OUTPUT.PUT_LINE('Region Name is required');
         when vmovietitle = '' or vmovietitle is null then
             DBMS_OUTPUT.PUT_LINE('Movie name is required');
         else
             begin
                 select movieid into varmovieid from movie where movietitle = vmovietitle;
                 begin
-                    select * into r_region from region where regionid = vregionid and movieid = varmovieid; 
-                    DELETE REGION WHERE regionid = vregionid and movieid = varmovieid;
+                    select * into r_region from region where regionname = vregionname and movieid = varmovieid; 
+                    DELETE REGION WHERE regionid = r_region.regionid and movieid = varmovieid;
                     DBMS_OUTPUT.PUT_LINE('Movie removed from this region.');
                 exception
                     when no_data_found then
@@ -896,6 +885,11 @@ BEGIN
             end;
     end case;
 END;
+/
+execute DELETE_MOVIE_FROM_REGION('UK', 'cats');
+execute DELETE_MOVIE_FROM_REGION('UK','');
+execute DELETE_MOVIE_FROM_REGION(NULL,'cats');
+execute DELETE_MOVIE_FROM_REGION('UK', 'cats');
 /
 --delete subscription
 CREATE or REPLACE PROCEDURE DELETE_SUBSCRIPTION_PLAN(
@@ -918,6 +912,9 @@ BEGIN
             end;
     end case;
 END;
+/
+execute DELETE_SUBSCRIPTION_PLAN('family discount');
+execute DELETE_SUBSCRIPTION_PLAN('this should fail');
 /
 --delete subtitles;
 CREATE or REPLACE PROCEDURE DELETE_SUBTITLE(
@@ -955,5 +952,80 @@ BEGIN
     --if no create new subtitle
 END;
 --add validation to see if movie and customer exists in toggles, cast
+/
+execute DELETE_SUBTITLE('cats', 'dutch');
+execute DELETE_SUBTITLE('cats', 'german');
+execute DELETE_SUBTITLE('cats', 'english');
+execute DELETE_SUBTITLE('', 'german');
+execute DELETE_SUBTITLE('cats', NULL);
+/
+--delete movie;
+create or replace PROCEDURE DELETE_MOVIE (
+    VARMovieTitle movie.movietitle%type)
+IS
+    VARMAXMOVIEID NUMBER;
+BEGIN
+    case
+        when VARMovieTitle = '' or VARMovieTitle is null then
+            DBMS_OUTPUT.PUT_LINE('Movie Title is required');
+        else           
+            begin 
+                select movieid into VARMAXMOVIEID from movie where movietitle = VARMovieTitle;
+                delete movie where movieid = VARMAXMOVIEID;
+                dbms_output.put_line('Movie ' || VARMovieTitle || ' deleted!');
+            exception
+                when no_data_found then
+                    dbms_output.put_line('Movie ' || VARMovieTitle || ' not found!');
+            end;
+    END CASE;
+    
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
+END;
+/
+execute DELETE_MOVIE('cats');
+execute DELETE_MOVIE('test');
+execute DELETE_MOVIE('');
+execute DELETE_MOVIE(NULL);
+/
+--customer delete
+create or replace PROCEDURE DELETE_CUSTOMER(--make customer NOT ACTIVE, and change purchase end date to today
+    vUsername customer.username%type,
+    vUserPassword customer.userpassword%type
+    )
+IS
+    VARUSER CUSTOMER%rowtype;
+BEGIN
+    case
+        when vUsername = '' or vUsername is null then
+            DBMS_OUTPUT.PUT_LINE('Username is required');
+        when vUserPassword = '' or vUserPassword is null then
+            DBMS_OUTPUT.PUT_LINE('Password is required');
+        else
+            begin 
+                select * into VARUSER from customer where lower(vUsername) = lower(username);
+                if vUserPassword <> VARUSER.userpassword then
+                    DBMS_OUTPUT.PUT_LINE('Incorrect password');
+                else 
+                    UPDATE CUSTOMER SET CUSTOMERSTATUS = 'NOT ACTIVE' where customerid = VARUSER.customerid;
+                    UPDATE PURCHASE SET ENDDATE = sysdate where customerid = VARUSER.customerid and startdate = (select max(startdate) from purchase where customerid = VARUSER.customerid); 
+                    DBMS_OUTPUT.PUT_LINE('Customer ' || VARUSER.userfirstname || ' ' || VARUSER.userlastname || ' successfully cancelled their subsription.');
+                end if;
+            exception
+                when no_data_found then
+                    DBMS_OUTPUT.PUT_LINE('User not found.');
+            end;
+        end case;
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
+END;
+/
+execute delete_customer('meghamillions123', 'p3');
+execute delete_customer('momo', 'panda');
+execute delete_customer('', 'panda');
+execute delete_customer('meghamillions123', NULL);
+execute delete_customer('meghamillions123', 'panda');
 /
 --commit;
