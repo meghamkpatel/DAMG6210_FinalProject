@@ -1,21 +1,24 @@
 
 
-CREATE OR REPLACE TRIGGER update_status
-AFTER INSERT OR UPDATE ON Purchase
+CREATE OR REPLACE TRIGGER update_customer_status
+AFTER INSERT OR UPDATE ON purchase
 FOR EACH ROW
 DECLARE
-Nend_date purchase.enddate%type;
-status varchar2(10);
+  v_customer_exists NUMBER;
 BEGIN
-SELECT CASE
-WHEN MAX(enddate) > SYSDATE THEN 'Active' ELSE 'Inactive' 
-END CASE INTO status 
-FROM Purchase
-WHERE CustomerID = :new.customerID;
-UPDATE customer
-SET customerstatus = status
-WHERE CustomerID = :new.customerID;
-End;
+  SELECT COUNT(*) INTO v_customer_exists
+  FROM customer
+  WHERE CustomerID = :new.customerID;
+  
+  IF v_customer_exists > 0 THEN
+    UPDATE customer
+    SET customerstatus = 'ACTIVE'
+    WHERE CustomerID = :new.customerID;
+  END IF;
+END;
+/
+
+
 
 
 
