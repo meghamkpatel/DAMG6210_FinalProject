@@ -68,7 +68,7 @@ EXCEPTION
 END;
 /
 -------------------------------------------------------------------------
-
+/
 CREATE OR REPLACE FUNCTION get_avg_rating_movie(p_movietitle IN VARCHAR2)
 RETURN NUMBER
 IS
@@ -79,24 +79,121 @@ BEGIN
   
   RETURN v_avg_rating;
 END;
-
----------------------------------------------------------------------------
-
-CREATE OR REPLACE FUNCTION get_movies(p_genre IN VARCHAR2)
+/
+-------------------------------------------------------------------------------
+CREATE OR REPLACE FUNCTION get_actormovies(p_actor IN VARCHAR2)   ------done1
 RETURN VARCHAR2
 IS
-  v_movies VARCHAR2(32767); -- increase the size of the variable
+  v_movies VARCHAR2(32767); 
+  v_actor VARCHAR2(32767); -- local variable to store converted actor name
+  f_actor VARCHAR2(32767);
 BEGIN
   v_movies := '';
-  FOR row IN (
-    SELECT movietitle 
-    FROM movie m
-    JOIN genre g ON m.genreID = g.genreID
-    WHERE genrename = p_genre
-  ) LOOP
-    v_movies := v_movies || row.movietitle || ' '; -- concatenate movie titles
-  END LOOP;
+  
+  -- Convert input actor name to sentence case
+  v_actor := LOWER(p_actor); -- Convert to lowercase
+  f_actor := INITCAP(v_actor); -- Convert to initcap
+  
+  BEGIN
+    FOR row IN (
+      SELECT DISTINCT movietitle 
+      FROM movie m
+      JOIN movie_cast c ON m.movieID = c.movieID
+      JOIN actor a ON c.actorID = a.actorID
+      WHERE a.actorfirstname = f_actor OR a.actorlastname = f_actor
+    ) LOOP
+      v_movies := v_movies || row.movietitle || CHR(10); -- concatenate movie titles with newline separator
+    END LOOP;
+    
+    IF v_movies IS NULL THEN
+      v_movies := 'No movies found for the specified actor.';
+    END IF;
+    
+  EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      v_movies := 'No movies found for the specified actor.';
+    WHEN OTHERS THEN
+      v_movies := 'Error occurred: ' || SQLERRM;
+  END;
   
   RETURN v_movies;
 END;
+/
+-----------------------------------------------------------------------------
+
+CREATE OR REPLACE FUNCTION get_directormovies(p_director IN VARCHAR2)   ------
+RETURN VARCHAR2
+IS
+  v_movies VARCHAR2(32767); 
+  v_director VARCHAR2(32767); -- local variable to store converted actor name
+  f_director VARCHAR2(32767);
+BEGIN
+  v_movies := '';
+  
+  -- Convert input actor name to sentence case
+  v_director := LOWER(p_director); -- Convert to lowercase
+  f_director := INITCAP(v_director); -- Convert to initcap
+  
+  BEGIN
+    FOR row IN (
+      SELECT DISTINCT movietitle 
+      FROM movie m
+      JOIN director d ON m.directorID = c.directorID
+      WHERE a.directorfirstname = f_director OR a.directorlastname = f_director
+    ) LOOP
+      v_movies := v_movies || row.movietitle || CHR(10); -- concatenate movie titles with newline separator
+    END LOOP;
+    
+    IF v_movies IS NULL THEN
+      v_movies := 'No movies found for the specified director.';
+    END IF;
+    
+  EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      v_movies := 'No movies found for the specified director.';
+    WHEN OTHERS THEN
+      v_movies := 'Error occurred: ' || SQLERRM;
+  END;
+  
+  RETURN v_movies;
+END;
+/
+------------------------------------------------------------------------------
+CREATE OR REPLACE FUNCTION get_movies(p_genre IN VARCHAR2) ---- done3
+RETURN VARCHAR2
+IS
+  v_movies VARCHAR2(32767); -- increased size of the variable
+  v_genre VARCHAR2(32767); -- added variable to store sentence case genre name
+BEGIN
+  v_genre := p_genre; -- store the original input genre name
+  v_movies := '';
+  
+  -- Convert input genre name to sentence case
+  v_genre := LOWER(v_genre); -- Convert to lowercase
+  v_genre := INITCAP(v_genre); -- Convert to initcap
+  
+  BEGIN
+    FOR row IN (
+      SELECT DISTINCT movietitle 
+      FROM movie m
+      JOIN genre g ON m.genreID = g.genreID
+      WHERE g.genrename = v_genre -- corrected WHERE clause
+    ) LOOP
+      v_movies := v_movies || row.movietitle || CHR(10); -- concatenate movie titles with newline separator
+    END LOOP;
+    
+    IF v_movies IS NULL THEN
+      v_movies := 'No movies found for the specified genre.';
+    END IF;
+    
+  EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+      v_movies := 'No movies found for the specified genre.';
+    WHEN OTHERS THEN
+      v_movies := 'Error occurred: ' || SQLERRM;
+  END;
+  
+  RETURN v_movies;
+END;
+/
 ------------------------------------------------------------------------------
