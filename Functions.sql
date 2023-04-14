@@ -121,7 +121,7 @@ END;
 /
 -----------------------------------------------------------------------------
 
-CREATE OR REPLACE FUNCTION get_directormovies(p_director IN VARCHAR2)   ------
+CREATE OR REPLACE FUNCTION get_directormovies(p_director IN VARCHAR2)   ------done1
 RETURN VARCHAR2
 IS
   v_movies VARCHAR2(32767); 
@@ -138,8 +138,8 @@ BEGIN
     FOR row IN (
       SELECT DISTINCT movietitle 
       FROM movie m
-      JOIN director d ON m.directorID = c.directorID
-      WHERE a.directorfirstname = f_director OR a.directorlastname = f_director
+      JOIN director d ON m.directorID = d.directorID
+      WHERE d.directorfirstname = f_director OR d.directorlastname = f_director
     ) LOOP
       v_movies := v_movies || row.movietitle || CHR(10); -- concatenate movie titles with newline separator
     END LOOP;
