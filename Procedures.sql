@@ -423,7 +423,8 @@ BEGIN
         else
             begin
                 select * into r_plan from subscription_plan where lower(planname) = lower(vplanname);
-                DBMS_OUTPUT.PUT_LINE('Plan already exists.');
+                update plan set plandescription = vplandescription, screenlimit = to_Number(vscreenlimit) where lower(planname) = lower(vplanname);
+                DBMS_OUTPUT.PUT_LINE('Plan updated.');
             exception
                 when no_data_found then
                     INSERT INTO subscription_plan VALUES(plan_seq.nextval, vplanname, vplandescription, to_Number(vscreenlimit));
@@ -536,20 +537,152 @@ execute ADD_DIRECTOR('dfghjkuif','ghfuyruuiidd');
 
 /
 --update movie
+create or replace PROCEDURE Update_MOVIE_ratings (
+    VARMovieTitle movie.movietitle%type,
+    VARRatings movie.ratings%type)
+IS
+    VARMAXMOVIEID NUMBER;
+BEGIN
+    case
+        when VARMovieTitle = '' or VARMovieTitle is null then
+            DBMS_OUTPUT.PUT_LINE('Movie Title is required');
+        when VARRatings = '' or VARRatings is null then
+            DBMS_OUTPUT.PUT_LINE('Movie Rating is required');
+        else           
+            begin 
+                select movieid into VARMAXMOVIEID from movie where movietitle = VARMovieTitle;
+                update movie set ratings = VARRatings where movieid = VARMAXMOVIEID;
+                dbms_output.put_line('Movie ' || VARMovieTitle || ' updated!');
+            exception
+                when no_data_found then
+                    dbms_output.put_line('Movie ' || VARMovieTitle || ' not found!');
+            end;
+    END CASE;
+    
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
+END;
 --delete movie;
+create or replace PROCEDURE Update_MOVIE_ratings (
+    VARMovieTitle movie.movietitle%type)
+IS
+    VARMAXMOVIEID NUMBER;
+BEGIN
+    case
+        when VARMovieTitle = '' or VARMovieTitle is null then
+            DBMS_OUTPUT.PUT_LINE('Movie Title is required');
+        else           
+            begin 
+                select movieid into VARMAXMOVIEID from movie where movietitle = VARMovieTitle;
+                delete movie where movieid = VARMAXMOVIEID;
+                dbms_output.put_line('Movie ' || VARMovieTitle || ' deleted!');
+            exception
+                when no_data_found then
+                    dbms_output.put_line('Movie ' || VARMovieTitle || ' not found!');
+            end;
+    END CASE;
+    
+EXCEPTION
+ when others then
+    dbms_output.put_line(sqlerrm);
+END;
 --update actor names;
+CREATE or REPLACE PROCEDURE Update_ACTOR(
+    vactorid actor.actorid%type,
+    vfirstname actor.actorfirstname%type, 
+    vlastname actor.actorlastname%type)
+IS
+    r_actor actor%ROWTYPE;
+    vmaxactor number;
+BEGIN
+    ---first check if actor name exists
+    case
+        when vactorid = '' or vactorid is null then
+            DBMS_OUTPUT.PUT_LINE('ID is required');
+        when vfirstname = '' or vfirstname is null then
+            DBMS_OUTPUT.PUT_LINE('First name is required');
+        when vlastname = '' or vlastname is null then
+            DBMS_OUTPUT.PUT_LINE('Last name is required');
+        else
+            begin 
+                select * into r_actor from actor where actorid = vactorid;
+                update actor set ACTORFIRSTNAME = vfirstname, ACTORLASTNAME = vlastname where actorid = r_actor.actorid;
+                DBMS_OUTPUT.PUT_LINE('Actor ' || vfirstname || '  ' || vlastname || ' is updated!');
+            exception
+                when no_data_found then
+                    DBMS_OUTPUT.PUT_LINE('Actor does not exist!');
+            end;
+    end case;    
+END;
 --delete actor
+CREATE or REPLACE PROCEDURE DELETE_ACTOR(
+    vactorid actor.actorid%type,
+    vfirstname actor.actorfirstname%type, 
+    vlastname actor.actorlastname%type)
+IS
+    r_actor actor%ROWTYPE;
+    vmaxactor number;
+BEGIN
+    ---first check if actor name exists
+
+    begin 
+        select * into r_actor from actor where actorid = vactorid or (ACTORFIRSTNAME = vfirstname and ACTORLASTNAME = vlastname);
+        delete actor where actorid = r_actor.actorid;
+        DBMS_OUTPUT.PUT_LINE('Actor ' || r_actor.ACTORFIRSTNAME || '  ' || r_actor.ACTORLASTNAME || ' is deleted');
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Actor does not exist!');
+    end;
+END;
 --customer delete
 --director delete
 --director update
 --genre update
 --add cast
+CREATE OR REPLACE PROCEDURE ADD_CAST(
+    in_movie_id movie_cast.movieid%type,
+    in_actor_id movie_cast.actorid%type) 
+IS
+	r_moviecast MOVIE_CAST%ROWTYPE;
+BEGIN
+    begin 
+        SELECT * INTO r_favorite FROM movie_cast WHERE MovieID = in_movie_id AND actorid = in_actor_id;
+        DBMS_OUTPUT.PUT_LINE('Actor already in Movie Cast');
+    exception
+        when no_data_found then
+            INSERT INTO Movie_Cast(MovieID, ActorID) VALUES (in_movie_id, in_actor_id);
+            DBMS_OUTPUT.PUT_LINE('Added to movie.');
+    end;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
+END;
 --delete cast
+CREATE OR REPLACE PROCEDURE DELETE_CAST(
+    in_movie_id movie_cast.movieid%type,
+    in_actor_id movie_cast.actorid%type) 
+IS
+	r_moviecast MOVIE_CAST%ROWTYPE;
+BEGIN
+    begin 
+        SELECT * INTO r_favorite FROM movie_cast WHERE MovieID = in_movie_id AND actorid = in_actor_id;
+        delete movie_cast WHERE MovieID = in_movie_id AND actorid = in_actor_id; 
+        DBMS_OUTPUT.PUT_LINE('Actor removed from Movie Cast');
+    exception
+        when no_data_found then
+            DBMS_OUTPUT.PUT_LINE('Cast member does not exist.');
+    end;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('Invalid movie or customer ID');
+END;
 --add purchase
 --update purchase
 --update region
 --delete region
---update subscription
+--delete subscription
 --delete subtitles;
+--add validation to see if movie and customer exists in toggles, cast
 
 commit;
