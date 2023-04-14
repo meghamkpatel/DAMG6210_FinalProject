@@ -1,28 +1,34 @@
 
-
-CREATE OR REPLACE FUNCTION REGION_RESTRICTED_MOVIE1(in_customer_id IN NUMBER, in_movie_id in NUMBER) 
+/
+CREATE OR REPLACE FUNCTION REGION_RESTRICTED_MOVIE1(in_customer_id IN NUMBER, in_movie_id IN NUMBER)
 Return VARCHAR2
 IS
-  cust_region VARCHAR2(100);
-  movie_region VARCHAR2(100);
-  var_movie_id number;
+var_movie_id number;
 BEGIN
-    SELECT m.movieid INTO var_movie_id FROM customer c JOIN address a ON a.CustomerID = c.CustomerID JOIN REGION r ON r.regionname=a.country
-    JOIN   Movie m ON m.movieid = r.movieid  WHERE c.CustomerID = in_customer_id AND m.movieid = in_movie_id;
-  IF var_movie_id IS NOT null THEN
-    DBMS_OUTPUT.PUT_LINE('Play Movie');
-  ELSE
-    DBMS_OUTPUT.PUT_LINE('Movie is not available in your Region');
-  END IF;
+SELECT m.movieid INTO var_movie_id
+FROM customer c
+JOIN address a ON a.CustomerID = c.CustomerID
+JOIN REGION r ON r.regionname=a.country
+JOIN Movie m ON m.movieid = in_movie_id
+WHERE c.CustomerID = in_customer_id AND m.movieid = in_movie_id AND r.regionname = a.country AND rownum = 1;
+
+IF var_movie_id = in_movie_id THEN
+RETURN 'Play Movie';
+ELSE
+RETURN 'Movie is not available in your Region';
+END IF;
+
+EXCEPTION
+WHEN no_data_found THEN
+RETURN 'No movie found with the specified ID and region';
 END;
-
-
+/
 -----------------------------------------------------------------------------------------------
 
-CREATE OR REPLACE FUNCTION get_movie_recommendation(genre IN VARCHAR2)
+CREATE OR REPLACE FUNCTION get_movie_recommendation(N_customer_id IN NUMBER)
 RETURN VARCHAR2
 IS
-  Movie_recommendations varchar2(3200);
+  Movie_recommendations varchar2(32000);
 BEGIN
   Movie_recommendations:='';
   for row in (
@@ -32,6 +38,7 @@ BEGIN
         SELECT m.genreid, COUNT(*) as total_count
         FROM movie m
         INNER JOIN watch_history w ON m.movieId = w.movieId
+        WHERE w.customerId = N_customer_id
         GROUP BY m.genreid
         ORDER BY total_count DESC
         FETCH FIRST 3 ROWS ONLY
@@ -39,12 +46,22 @@ BEGIN
     WHERE m.movieId NOT IN (
         SELECT movieId
         FROM watch_history
+        WHERE customerId = N_customer_id
     )
     FETCH FIRST 10 ROWS ONLY
   ) loop
     Movie_recommendations:=Movie_recommendations || ' ' || row.movietitle;
   end loop;
-  RETURN Movie_recommendations;
+  
+  IF Movie_recommendations IS NULL THEN
+    RETURN 'No movie recommendations found for the specified customer.';
+  ELSE
+    RETURN Movie_recommendations;
+  END IF;
+  
+EXCEPTION
+  WHEN OTHERS THEN
+    RETURN 'An error occurred while getting movie recommendations.';
 END;
 
 -------------------------------------------------------------------------------
