@@ -164,3 +164,29 @@ BEGIN
 END;
 /
 ------------------------------------------------------------------------------
+
+--Renews plan adds a row to the purchase table
+CREATE OR REPLACE FUNCTION auto_renew_plan(plan_id IN NUMBER, customer_id IN NUMBER)
+RETURN NUMBER
+IS
+  purchase_id NUMBER;
+  start_date DATE := SYSDATE;
+  end_date DATE := ADD_MONTHS(SYSDATE, 1);
+BEGIN
+  SELECT MAX(purchaseid) + 1 INTO purchase_id FROM purchase;
+  
+  INSERT INTO purchase (purchaseid, planid, customerid, startdate, enddate)
+  VALUES (purchase_id, plan_id, customer_id, start_date, end_date);
+  
+  COMMIT;
+  
+  RETURN (purchase_id);
+END;
+
+-- This is the function call 
+/*DECLARE
+  new_purchase_id NUMBER;
+BEGIN
+  new_purchase_id := auto_renew_plan(3, 123); -- replace with your plan_id and customer_id values
+END;*/ 
+
