@@ -833,7 +833,7 @@ SELECT * FROM Customer;
 ------------------------Address-----------------------------
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 588', '1 Elgar Avenue', 'Bronx', 'New York', 'United States', 17843);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 12', '17 Dakota Hill', 'Pompano Beach', 'Florida', 'United States', 8349);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 83', '68133 Ridgeway Street', 'Plessisville', 'Québec', 'Canada', 22532);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 83', '68133 Ridgeway Street', 'Plessisville', 'QuÃ©bec', 'Canada', 22532);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 61', '3 Eastlawn Avenue', 'Catalina', 'Newfoundland and Labrador', 'Canada', 3216);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 93471', '28 Scott Crossing', 'Hartford', 'Connecticut', 'United States', 15771);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 36', '75 Hazelcrest Park', 'Keswick', 'Ontario', 'Canada', 6871);
@@ -843,14 +843,14 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 279', '10088 Express Road', 'Erie', 'Pennsylvania', 'United States', 5052);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 4', '02649 Thackeray Place', 'Raleigh', 'North Carolina', 'United States', 27937);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 550', '802 Texas Avenue', 'Duluth', 'Georgia', 'United States', 29666);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 13427', '7429 3rd Circle', 'L''Épiphanie', 'Québec', 'Canada', 8296);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 13427', '7429 3rd Circle', 'L''Ã‰piphanie', 'QuÃ©bec', 'Canada', 8296);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 25', '93365 Knutson Lane', 'Milwaukee', 'Wisconsin', 'United States', 23114);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1120', '144 Lotheville Pass', 'Dean', 'England', 'United Kingdom', 16896);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1312', '696 Northfield Junction', 'Richmond', 'Virginia', 'United States', 11417);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1627', '13 Moland Trail', 'Las Vegas', 'Nevada', 'United States', 8931);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 60087', '85611 Lien Crossing', 'Marathon', 'Ontario', 'Canada', 22957);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '1st Floor', '14941 Doe Crossing Crossing', 'Palmdale', 'California', 'United States', 6508);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1509', '75 Scoville Terrace', 'Lac-Brome', 'Québec', 'Canada', 16028);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1509', '75 Scoville Terrace', 'Lac-Brome', 'QuÃ©bec', 'Canada', 16028);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 588', '76724 Old Gate Road', 'Colorado Springs', 'Colorado', 'United States', 10709);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 97213', '249 Center Drive', 'Tampa', 'Florida', 'United States', 25171);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 12', '3 Meadow Vale Crossing', 'Portland', 'Oregon', 'United States', 22696);
@@ -864,13 +864,13 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 98984', '88 Hoepker Crossing', 'Fort Smith', 'Northwest Territories', 'Canada', 15667);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 1', '87402 Badeau Circle', 'Reading', 'Pennsylvania', 'United States', 28817);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 21', '07379 Vahlen Park', 'Houston', 'Texas', 'United States', 21388);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 542', '56 Canary Circle', 'Daveluyville', 'Québec', 'Canada', 32547);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 542', '56 Canary Circle', 'Daveluyville', 'QuÃ©bec', 'Canada', 32547);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '17th Floor', '07997 Kingsford Lane', 'Lumsden', 'Saskatchewan', 'Canada', 16982);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 685', '22170 Dapin Court', 'New York City', 'New York', 'United States', 26017);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '5728 Lien Lane', 'Stapleford', 'England', 'United Kingdom', 29526);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 53231', '0680 Kennedy Street', 'Ormstown', 'Québec', 'Canada', 15205);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 53231', '0680 Kennedy Street', 'Ormstown', 'QuÃ©bec', 'Canada', 15205);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 58238', '5 Forest Dale Hill', 'Fort Macleod', 'Alberta', 'Canada', 32703);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 335', '08 Thackeray Circle', 'Sainte-Adèle', 'Québec', 'Canada', 26648);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 335', '08 Thackeray Circle', 'Sainte-AdÃ¨le', 'QuÃ©bec', 'Canada', 26648);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 49', '2 Fair Oaks Street', 'Mattawa', 'Ontario', 'Canada', 12070);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 131', '493 Dixon Terrace', 'Lincoln', 'Nebraska', 'United States', 25269);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '20th Floor', '3839 Troy Place', 'Louisville', 'Kentucky', 'United States', 23238);
@@ -879,11 +879,11 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1135', '525 Paget Plaza', 'Morinville', 'Alberta', 'Canada', 21109);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 46', '91675 Schurz Lane', 'Milton', 'Scotland', 'United Kingdom', 2203);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '6th Floor', '560 Trailsway Hill', 'Hanover', 'Ontario', 'Canada', 22246);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 43', '22510 Schlimgen Alley', 'Montréal-Ouest', 'Québec', 'Canada', 28765);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 43', '22510 Schlimgen Alley', 'MontrÃ©al-Ouest', 'QuÃ©bec', 'Canada', 28765);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 12515', '1947 Clarendon Terrace', 'Toledo', 'Ohio', 'United States', 21379);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 47', '44 3rd Junction', 'Portland', 'Oregon', 'United States', 28549);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 248', '775 Troy Drive', 'Los Angeles', 'California', 'United States', 26883);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '4th Floor', '773 Lotheville Trail', 'L''Assomption', 'Québec', 'Canada', 17063);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '4th Floor', '773 Lotheville Trail', 'L''Assomption', 'QuÃ©bec', 'Canada', 17063);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 37785', '7 Hazelcrest Park', 'Lansing', 'Michigan', 'United States', 10267);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 26393', '22161 Forest Run Trail', 'Atlanta', 'Georgia', 'United States', 5605);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1977', '634 Hudson Lane', 'Ajax', 'Ontario', 'Canada', 9550);
@@ -900,7 +900,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '18th Floor', '1 Hudson Place', 'Louisville', 'Kentucky', 'United States', 10110);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 15421', '8 Tony Avenue', 'San Jose', 'California', 'United States', 25867);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 6', '982 Blaine Street', 'West End', 'British Columbia', 'Canada', 33702);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1374', '0 Rutledge Park', 'Lévis', 'Québec', 'Canada', 12998);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1374', '0 Rutledge Park', 'LÃ©vis', 'QuÃ©bec', 'Canada', 12998);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '14th Floor', '80089 Golf Junction', 'Seattle', 'Washington', 'United States', 20706);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 11', '7676 Paget Point', 'Lynchburg', 'Virginia', 'United States', 4535);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 36920', '4 Bowman Trail', 'Milwaukee', 'Wisconsin', 'United States', 14813);
@@ -921,15 +921,15 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '10th Floor', '03 Meadow Valley Place', 'Milwaukee', 'Wisconsin', 'United States', 34892);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 13', '75175 Brown Circle', 'Johnson City', 'Tennessee', 'United States', 1736);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 80', '9 Donald Place', 'Spirit River', 'Alberta', 'Canada', 34383);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 166', '2722 Gerald Alley', 'Malartic', 'Québec', 'Canada', 34428);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 166', '2722 Gerald Alley', 'Malartic', 'QuÃ©bec', 'Canada', 34428);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 778', '0 Lunder Lane', 'Dallas', 'Texas', 'United States', 19759);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '10th Floor', '6883 Brickson Park Street', 'Huntington Beach', 'California', 'United States', 8822);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 7660', '927 Fisk Junction', 'San Diego', 'California', 'United States', 11276);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 464', '13837 Clyde Gallagher Hill', 'Picton', 'Ontario', 'Canada', 1349);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '55368 Fremont Street', 'Upton', 'England', 'United Kingdom', 10848);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1830', '4256 Lyons Parkway', 'Mesquite', 'Texas', 'United States', 27622);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1561', '05 Becker Alley', 'Vaudreuil-Dorion', 'Québec', 'Canada', 29938);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1658', '41888 Lighthouse Bay Trail', 'Ormstown', 'Québec', 'Canada', 24073);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1561', '05 Becker Alley', 'Vaudreuil-Dorion', 'QuÃ©bec', 'Canada', 29938);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1658', '41888 Lighthouse Bay Trail', 'Ormstown', 'QuÃ©bec', 'Canada', 24073);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 74', '117 Debra Way', 'Beaverlodge', 'Alberta', 'Canada', 8759);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 74511', '568 Blackbird Place', 'Fort McMurray', 'Alberta', 'Canada', 28880);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1348', '8282 Macpherson Crossing', 'Monroe', 'Louisiana', 'United States', 18846);
@@ -957,8 +957,8 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 733', '529 Heffernan Parkway', 'Pasadena', 'California', 'United States', 9441);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '8440 Reindahl Pass', 'Erie', 'Pennsylvania', 'United States', 18582);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '5th Floor', '4 Fair Oaks Road', 'Nanton', 'Alberta', 'Canada', 23258);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1343', '295 Blackbird Way', 'Princeville', 'Québec', 'Canada', 30192);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1814', '19 Porter Point', 'Hudson', 'Québec', 'Canada', 7868);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1343', '295 Blackbird Way', 'Princeville', 'QuÃ©bec', 'Canada', 30192);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1814', '19 Porter Point', 'Hudson', 'QuÃ©bec', 'Canada', 7868);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 21946', '9 4th Pass', 'Arlington', 'Virginia', 'United States', 18705);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 48483', '8844 Green Center', 'Louisville', 'Kentucky', 'United States', 17934);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1420', '274 Mosinee Center', 'Austin', 'Texas', 'United States', 2836);
@@ -973,11 +973,11 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1919', '20737 Bunker Hill Parkway', 'Philadelphia', 'Pennsylvania', 'United States', 28635);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1680', '37 Farmco Crossing', 'Houston', 'Texas', 'United States', 33487);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 168', '8 Washington Crossing', 'Sacramento', 'California', 'United States', 12795);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '54 Dawn Crossing', 'Daveluyville', 'Québec', 'Canada', 36213);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '54 Dawn Crossing', 'Daveluyville', 'QuÃ©bec', 'Canada', 36213);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1213', '69 Eggendart Junction', 'Prince Albert', 'Saskatchewan', 'Canada', 29079);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '1 Norway Maple Trail', 'Thetford-Mines', 'Québec', 'Canada', 5564);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '1 Norway Maple Trail', 'Thetford-Mines', 'QuÃ©bec', 'Canada', 5564);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '254 Browning Way', 'Austin', 'Texas', 'United States', 1327);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 52', '48 Moulton Terrace', 'Baie-Saint-Paul', 'Québec', 'Canada', 29444);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 52', '48 Moulton Terrace', 'Baie-Saint-Paul', 'QuÃ©bec', 'Canada', 29444);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '16th Floor', '11124 Utah Place', 'Dallas', 'Texas', 'United States', 30453);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '10th Floor', '6 Troy Court', 'Winston Salem', 'North Carolina', 'United States', 36209);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '7 Dexter Drive', 'Chicago', 'Illinois', 'United States', 19849);
@@ -992,8 +992,8 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 970', '809 Barnett Lane', 'Altona', 'Manitoba', 'Canada', 18070);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1525', '540 Butterfield Alley', 'Sydney', 'New South Wales', 'Australia', 26803);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 86', '4313 Cascade Hill', 'Markham', 'Ontario', 'Canada', 23250);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '20293 Alpine Place', 'Cabano', 'Québec', 'Canada', 27132);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 472', '7 Thierer Lane', 'Bécancour', 'Québec', 'Canada', 25196);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '20293 Alpine Place', 'Cabano', 'QuÃ©bec', 'Canada', 27132);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 472', '7 Thierer Lane', 'BÃ©cancour', 'QuÃ©bec', 'Canada', 25196);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 21952', '58 Hazelcrest Circle', 'Omaha', 'Nebraska', 'United States', 8206);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 8', '79 Bultman Street', 'Cleveland', 'Ohio', 'United States', 22925);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 31', '87773 Forest Run Circle', 'San Diego', 'California', 'United States', 24709);
@@ -1003,7 +1003,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '5th Floor', '12357 Brickson Park Street', 'Corpus Christi', 'Texas', 'United States', 10529);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1860', '3524 Lien Drive', 'Whistler', 'British Columbia', 'Canada', 10178);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 57023', '0 Loeprich Drive', 'Coaldale', 'Alberta', 'Canada', 16382);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '8193 Karstens Road', 'Nicolet', 'Québec', 'Canada', 25052);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '8193 Karstens Road', 'Nicolet', 'QuÃ©bec', 'Canada', 25052);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1019', '2 Dovetail Drive', 'Detroit', 'Michigan', 'United States', 14892);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 841', '824 Granby Road', 'Charleston', 'West Virginia', 'United States', 3198);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 617', '5496 Magdeline Junction', 'Boca Raton', 'Florida', 'United States', 26213);
@@ -1013,7 +1013,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 56253', '2 Veith Lane', 'Prince Albert', 'Saskatchewan', 'Canada', 5710);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '14th Floor', '6 Redwing Road', 'La Ronge', 'Saskatchewan', 'Canada', 16932);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '537 8th Center', 'Weyburn', 'Saskatchewan', 'Canada', 9850);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 92091', '0 Ridgeway Street', 'Roberval', 'Québec', 'Canada', 8628);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 92091', '0 Ridgeway Street', 'Roberval', 'QuÃ©bec', 'Canada', 8628);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1035', '73 Bultman Way', 'Los Angeles', 'California', 'United States', 17973);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 7423', '8 5th Point', 'San Jose', 'California', 'United States', 9147);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '16th Floor', '3 Del Mar Avenue', 'Punta Gorda', 'Florida', 'United States', 11430);
@@ -1038,7 +1038,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 966', '4386 Village Plaza', 'Indianapolis', 'Indiana', 'United States', 34727);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 209', '3841 Rieder Drive', 'Toledo', 'Ohio', 'United States', 8477);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1370', '7856 South Hill', 'Arlington', 'Virginia', 'United States', 15964);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '12th Floor', '28330 Heffernan Trail', 'Sutton', 'Québec', 'Canada', 6949);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '12th Floor', '28330 Heffernan Trail', 'Sutton', 'QuÃ©bec', 'Canada', 6949);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 49', '8442 Browning Park', 'Oakville', 'Ontario', 'Canada', 32132);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 901', '6 Nevada Junction', 'Saint Petersburg', 'Florida', 'United States', 13044);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '3rd Floor', '71761 Eagle Crest Avenue', 'Richmond', 'Virginia', 'United States', 14505);
@@ -1050,7 +1050,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 44', '6 International Drive', 'Swift Current', 'Saskatchewan', 'Canada', 20984);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1295', '8 Schurz Parkway', 'Youngstown', 'Ohio', 'United States', 16595);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 50', '553 Quincy Terrace', 'Clearwater', 'Florida', 'United States', 6505);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 480', '2 Morning Road', 'Québec', 'Québec', 'Canada', 6218);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 480', '2 Morning Road', 'QuÃ©bec', 'QuÃ©bec', 'Canada', 6218);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 56773', '7 Declaration Pass', 'Launceston', 'Tasmania', 'Australia', 11037);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 29035', '4 Novick Crossing', 'Philadelphia', 'Pennsylvania', 'United States', 24276);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 91', '9425 Petterle Park', 'Meadow Lake', 'Saskatchewan', 'Canada', 20933);
@@ -1082,13 +1082,13 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 51', '70097 Mandrake Road', 'Estevan', 'Saskatchewan', 'Canada', 18481);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '09193 Corry Terrace', 'Houston', 'Texas', 'United States', 20761);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '65858 Nelson Alley', 'New York City', 'New York', 'United States', 14085);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1378', '505 Ohio Lane', 'Boucherville', 'Québec', 'Canada', 13284);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1378', '505 Ohio Lane', 'Boucherville', 'QuÃ©bec', 'Canada', 13284);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 45418', '72121 School Court', 'Upton', 'England', 'United Kingdom', 10564);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1616', '83321 Anzinger Point', 'Long Beach', 'California', 'United States', 28854);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 197', '31745 Northfield Plaza', 'Malartic', 'Québec', 'Canada', 34807);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 197', '31745 Northfield Plaza', 'Malartic', 'QuÃ©bec', 'Canada', 34807);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '20th Floor', '53 Northwestern Court', 'Dearborn', 'Michigan', 'United States', 27207);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '9th Floor', '65 Sage Place', 'Port Colborne', 'Ontario', 'Canada', 31301);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '32 Pawling Pass', 'Montréal-Est', 'Québec', 'Canada', 31647);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '32 Pawling Pass', 'MontrÃ©al-Est', 'QuÃ©bec', 'Canada', 31647);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 30454', '7400 Bobwhite Point', 'Buckland', 'England', 'United Kingdom', 31020);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 74457', '7208 Fallview Place', 'Chandler', 'Arizona', 'United States', 19579);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1731', '41 Northport Point', 'Houston', 'Texas', 'United States', 27211);
@@ -1099,17 +1099,17 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '12th Floor', '29424 International Alley', 'Coquitlam', 'British Columbia', 'Canada', 20440);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1047', '4 Southridge Alley', 'West Palm Beach', 'Florida', 'United States', 9551);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 7362', '4501 Michigan Point', 'Craigavon', 'Northern Ireland', 'United Kingdom', 35823);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 85', '84 Towne Parkway', 'Magog', 'Québec', 'Canada', 32862);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 85', '84 Towne Parkway', 'Magog', 'QuÃ©bec', 'Canada', 32862);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '14th Floor', '855 Rieder Park', 'Reno', 'Nevada', 'United States', 3451);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 54772', '0068 Hoard Road', 'Philadelphia', 'Pennsylvania', 'United States', 11640);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '10th Floor', '06 5th Place', 'Irricana', 'Alberta', 'Canada', 28097);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 497', '1 Nevada Circle', 'El Paso', 'Texas', 'United States', 34678);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 100', '965 Sachtjen Lane', 'Fort Worth', 'Texas', 'United States', 30536);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1968', '66 Moland Road', 'Washington', 'District of Columbia', 'United States', 18383);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 139', '77872 Weeping Birch Trail', 'Nicolet', 'Québec', 'Canada', 15480);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 139', '77872 Weeping Birch Trail', 'Nicolet', 'QuÃ©bec', 'Canada', 15480);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '979 Ryan Pass', 'Sydney South', 'New South Wales', 'Australia', 11880);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '5th Floor', '21898 Goodland Terrace', 'Saint Petersburg', 'Florida', 'United States', 8512);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1466', '258 Carpenter Parkway', 'Saint-Bruno-de-Montarville', 'Québec', 'Canada', 35511);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1466', '258 Carpenter Parkway', 'Saint-Bruno-de-Montarville', 'QuÃ©bec', 'Canada', 35511);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 84', '9985 Iowa Street', 'Springfield', 'Massachusetts', 'United States', 21349);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1819', '9476 Calypso Avenue', 'Rochester', 'New York', 'United States', 25227);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '18th Floor', '5 Hoepker Drive', 'Des Moines', 'Iowa', 'United States', 10079);
@@ -1122,8 +1122,8 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 2346', '873 Fieldstone Place', 'Washington', 'District of Columbia', 'United States', 5691);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1777', '67861 Bultman Trail', 'Delray Beach', 'Florida', 'United States', 28059);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '4th Floor', '341 Ludington Parkway', 'Sunnyvale', 'California', 'United States', 22047);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1111', '8746 Atwood Park', 'Saint-Rémi', 'Québec', 'Canada', 13863);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 76500', '663 East Alley', 'Alma', 'Québec', 'Canada', 33276);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1111', '8746 Atwood Park', 'Saint-RÃ©mi', 'QuÃ©bec', 'Canada', 13863);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 76500', '663 East Alley', 'Alma', 'QuÃ©bec', 'Canada', 33276);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 943', '9 Raven Trail', 'Washington', 'District of Columbia', 'United States', 35978);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '13th Floor', '1172 Algoma Trail', 'Amarillo', 'Texas', 'United States', 13092);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '13th Floor', '6 Meadow Ridge Place', 'Maple Ridge', 'British Columbia', 'Canada', 4852);
@@ -1138,7 +1138,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '68292 Melby Alley', 'Knoxville', 'Tennessee', 'United States', 17861);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 11131', '53098 Victoria Place', 'Dulles', 'Virginia', 'United States', 17317);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 40549', '7577 Norway Maple Pass', 'Dayton', 'Ohio', 'United States', 10003);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 70', '18 Washington Center', 'Berthierville', 'Québec', 'Canada', 10360);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 70', '18 Washington Center', 'Berthierville', 'QuÃ©bec', 'Canada', 10360);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 29164', '9 Arizona Crossing', 'Hobart', 'Tasmania', 'Australia', 14882);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 127', '27814 Larry Drive', 'Richmond', 'Virginia', 'United States', 10550);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 53', '92622 Anniversary Avenue', 'Cornwall', 'Prince Edward Island', 'Canada', 33371);
@@ -1157,12 +1157,12 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 44894', '8 Ridgeway Circle', 'Pensacola', 'Florida', 'United States', 30755);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 374', '87 Namekagon Crossing', 'Yonkers', 'New York', 'United States', 28005);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 65', '939 Summit Hill', 'Reno', 'Nevada', 'United States', 20550);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '09 Mitchell Trail', 'Cowansville', 'Québec', 'Canada', 17317);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '09 Mitchell Trail', 'Cowansville', 'QuÃ©bec', 'Canada', 17317);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 45383', '9 Gateway Crossing', 'Calmar', 'Alberta', 'Canada', 25618);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '68 Monica Way', 'Seminole', 'Florida', 'United States', 14390);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1561', '8 Buhler Circle', 'St. Catharines', 'Ontario', 'Canada', 20605);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 45487', '2 Caliangt Circle', 'Stockton', 'California', 'United States', 17064);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 22', '600 Commercial Avenue', 'Fermont', 'Québec', 'Canada', 13262);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 22', '600 Commercial Avenue', 'Fermont', 'QuÃ©bec', 'Canada', 13262);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 272', '6 Southridge Point', 'Clearwater', 'Florida', 'United States', 11670);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 928', '2278 Heath Plaza', 'Bonavista', 'Newfoundland and Labrador', 'Canada', 27521);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 81', '7922 Sage Park', 'Agraharam', 'Andhra Pradesh', 'India', 25281);
@@ -1178,11 +1178,11 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '889 Commercial Road', 'Dayton', 'Ohio', 'United States', 26801);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 262', '8 Colorado Lane', 'Miami', 'Florida', 'United States', 31476);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 214', '059 Cardinal Point', 'Medicine Hat', 'Alberta', 'Canada', 23882);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1242', '54583 Garrison Trail', 'Côte-Saint-Luc', 'Québec', 'Canada', 2482);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 308', '6 Lakeland Road', 'Macamic', 'Québec', 'Canada', 27819);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1242', '54583 Garrison Trail', 'CÃ´te-Saint-Luc', 'QuÃ©bec', 'Canada', 2482);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 308', '6 Lakeland Road', 'Macamic', 'QuÃ©bec', 'Canada', 27819);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '34 Reinke Circle', 'Saint Paul', 'Minnesota', 'United States', 17393);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1632', '3 Merrick Crossing', 'Markham', 'Ontario', 'Canada', 20618);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '75 Donald Circle', 'Fermont', 'Québec', 'Canada', 17694);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '75 Donald Circle', 'Fermont', 'QuÃ©bec', 'Canada', 17694);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 93025', '53949 Meadow Valley Drive', 'Cincinnati', 'Ohio', 'United States', 23416);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 72784', '82413 Lakewood Circle', 'Zephyrhills', 'Florida', 'United States', 19767);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 66', '77071 Magdeline Alley', 'Muskegon', 'Michigan', 'United States', 19808);
@@ -1191,21 +1191,21 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 33141', '422 Shopko Center', 'Lawrenceville', 'Georgia', 'United States', 35513);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 759', '860 Carey Place', 'Manning', 'Alberta', 'Canada', 4868);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1361', '3521 Dwight Park', 'Winter Haven', 'Florida', 'United States', 12823);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1308', '8736 Thackeray Lane', 'Boucherville', 'Québec', 'Canada', 25626);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1308', '8736 Thackeray Lane', 'Boucherville', 'QuÃ©bec', 'Canada', 25626);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '5th Floor', '02 International Pass', 'Saint Joseph', 'Missouri', 'United States', 15814);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 208', '1 Summer Ridge Park', 'Brooklyn', 'New York', 'United States', 7551);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 783', '210 Eagle Crest Place', 'Abbotsford', 'British Columbia', 'Canada', 26118);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 14729', '74900 Hansons Circle', 'Barrie', 'Ontario', 'Canada', 30558);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 92', '194 Paget Hill', 'Thessalon', 'Ontario', 'Canada', 26195);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 169', '36 Stoughton Road', 'Milwaukee', 'Wisconsin', 'United States', 8510);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '13th Floor', '9651 Waxwing Place', 'Pierreville', 'Québec', 'Canada', 20461);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '13th Floor', '9651 Waxwing Place', 'Pierreville', 'QuÃ©bec', 'Canada', 20461);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 90260', '1567 Canary Terrace', 'Garden Grove', 'California', 'United States', 19568);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 85', '12 Mccormick Pass', 'Knoxville', 'Tennessee', 'United States', 18468);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1697', '15 Crownhardt Park', 'Boucherville', 'Québec', 'Canada', 34641);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1697', '15 Crownhardt Park', 'Boucherville', 'QuÃ©bec', 'Canada', 34641);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 647', '4261 Heffernan Avenue', 'Bonavista', 'Newfoundland and Labrador', 'Canada', 5235);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '13th Floor', '5924 Hazelcrest Point', 'Ocala', 'Florida', 'United States', 7472);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '410 Heath Circle', 'New York City', 'New York', 'United States', 16093);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1848', '35802 Heath Trail', 'Montréal-Ouest', 'Québec', 'Canada', 19784);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1848', '35802 Heath Trail', 'MontrÃ©al-Ouest', 'QuÃ©bec', 'Canada', 19784);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1831', '00925 Huxley Circle', 'Houston', 'Texas', 'United States', 19291);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 864', '67321 Bluejay Hill', 'Battle Creek', 'Michigan', 'United States', 15568);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 23071', '1 Blackbird Street', 'Chicago', 'Illinois', 'United States', 4961);
@@ -1225,7 +1225,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '72 Shopko Circle', 'Lansing', 'Michigan', 'United States', 1362);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 870', '70 Portage Lane', 'Dallas', 'Texas', 'United States', 28223);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 50606', '78 Carioca Parkway', 'Collingwood', 'Ontario', 'Canada', 7403);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1795', '16517 Tennyson Place', 'Coaticook', 'Québec', 'Canada', 15807);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1795', '16517 Tennyson Place', 'Coaticook', 'QuÃ©bec', 'Canada', 15807);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 28613', '00 Cardinal Street', 'Atlanta', 'Georgia', 'United States', 3521);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 15', '69503 Twin Pines Lane', 'Atlanta', 'Georgia', 'United States', 30603);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '8201 Texas Drive', 'Morden', 'Manitoba', 'Canada', 30379);
@@ -1233,14 +1233,14 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 483', '16775 Loftsgordon Lane', 'Nelson', 'British Columbia', 'Canada', 20400);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 800', '946 Mendota Place', 'Cornwall', 'Prince Edward Island', 'Canada', 12764);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 97431', '31 Morningstar Pass', 'Youngstown', 'Ohio', 'United States', 9388);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1166', '4197 Alpine Lane', 'Carleton-sur-Mer', 'Québec', 'Canada', 19380);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1166', '4197 Alpine Lane', 'Carleton-sur-Mer', 'QuÃ©bec', 'Canada', 19380);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '10th Floor', '515 4th Pass', 'Lynn', 'Massachusetts', 'United States', 22901);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 16860', '53833 Tennyson Lane', 'Pasadena', 'California', 'United States', 9934);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 715', '931 Troy Street', 'Amos', 'Québec', 'Canada', 2376);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 715', '931 Troy Street', 'Amos', 'QuÃ©bec', 'Canada', 2376);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1691', '127 Milwaukee Place', 'Prince Rupert', 'British Columbia', 'Canada', 6156);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 98', '782 Chive Place', 'Charlottetown', 'Prince Edward Island', 'Canada', 12156);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1749', '16615 Oneill Crossing', 'Harrisburg', 'Pennsylvania', 'United States', 27795);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 622', '975 Little Fleur Place', 'Charlemagne', 'Québec', 'Canada', 12801);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 622', '975 Little Fleur Place', 'Charlemagne', 'QuÃ©bec', 'Canada', 12801);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1889', '6628 Portage Parkway', 'London', 'England', 'United Kingdom', 28255);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 360', '6385 Duke Avenue', 'Las Vegas', 'Nevada', 'United States', 30583);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 14473', '9629 Mcguire Lane', 'Mesa', 'Arizona', 'United States', 35843);
@@ -1252,7 +1252,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 15', '82 Starling Hill', 'Metchosin', 'British Columbia', 'Canada', 22091);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '20th Floor', '3 Kropf Avenue', 'New York City', 'New York', 'United States', 19970);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '8th Floor', '189 Holmberg Court', 'Tallahassee', 'Florida', 'United States', 28070);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 79563', '406 Packers Terrace', 'Dollard-Des Ormeaux', 'Québec', 'Canada', 19196);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 79563', '406 Packers Terrace', 'Dollard-Des Ormeaux', 'QuÃ©bec', 'Canada', 19196);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 6', '891 Steensland Pass', 'Battle Creek', 'Michigan', 'United States', 7846);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 17888', '834 Huxley Drive', 'Annapolis', 'Maryland', 'United States', 18110);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1779', '66983 Warner Hill', 'Viking', 'Alberta', 'Canada', 15522);
@@ -1260,7 +1260,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 494', '79 Schlimgen Park', 'Amarillo', 'Texas', 'United States', 6353);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 25450', '2042 Steensland Pass', 'Rocky Mountain House', 'Alberta', 'Canada', 3215);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 60012', '27 Westend Parkway', 'Chicago', 'Illinois', 'United States', 23410);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 60', '298 Acker Crossing', 'Beloeil', 'Québec', 'Canada', 16919);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 60', '298 Acker Crossing', 'Beloeil', 'QuÃ©bec', 'Canada', 16919);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 365', '298 Texas Way', 'Fort Worth', 'Texas', 'United States', 35073);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 70', '8738 Arkansas Court', 'Minneapolis', 'Minnesota', 'United States', 8736);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 415', '457 Lakeland Park', 'San Antonio', 'Texas', 'United States', 2861);
@@ -1274,7 +1274,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '5th Floor', '503 Maryland Alley', 'Crossfield', 'Alberta', 'Canada', 21506);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 12', '013 Goodland Hill', 'Memphis', 'Tennessee', 'United States', 10398);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 36', '47461 Bunker Hill Park', 'Boston', 'Massachusetts', 'United States', 8336);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '14th Floor', '8364 1st Plaza', 'Bécancour', 'Québec', 'Canada', 9726);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '14th Floor', '8364 1st Plaza', 'BÃ©cancour', 'QuÃ©bec', 'Canada', 9726);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 695', '70 Colorado Place', 'Toledo', 'Ohio', 'United States', 9399);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 89954', '7 Orin Point', 'Colorado Springs', 'Colorado', 'United States', 3161);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 4857', '240 Sunfield Hill', 'Brooklyn', 'New York', 'United States', 5781);
@@ -1283,7 +1283,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '0 1st Road', 'Largo', 'Florida', 'United States', 33771);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1756', '2 Lakewood Gardens Road', 'Amarillo', 'Texas', 'United States', 20883);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 17', '1 Banding Drive', 'Chicago', 'Illinois', 'United States', 25886);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '9 Haas Hill', 'Sainte-Marthe-sur-le-Lac', 'Québec', 'Canada', 12731);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '9 Haas Hill', 'Sainte-Marthe-sur-le-Lac', 'QuÃ©bec', 'Canada', 12731);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 589', '120 Little Fleur Point', 'Clearwater', 'Florida', 'United States', 35473);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 7', '91 Rutledge Junction', 'Las Vegas', 'Nevada', 'United States', 30215);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '71 Brentwood Park', 'Las Vegas', 'Nevada', 'United States', 17063);
@@ -1295,11 +1295,11 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 43471', '32 Aberg Point', 'Prince Rupert', 'British Columbia', 'Canada', 27943);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '1st Floor', '47263 Florence Junction', 'Outlook', 'Saskatchewan', 'Canada', 35020);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 76', '8 Sutteridge Point', 'Tuscaloosa', 'Alabama', 'United States', 26845);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 341', '9793 Old Shore Junction', 'Malartic', 'Québec', 'Canada', 24648);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 341', '9793 Old Shore Junction', 'Malartic', 'QuÃ©bec', 'Canada', 24648);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 92', '96 Schurz Circle', 'Philadelphia', 'Pennsylvania', 'United States', 10917);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1625', '772 Kenwood Crossing', 'Denver', 'Colorado', 'United States', 31471);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 229', '315 Green Ridge Drive', 'Baton Rouge', 'Louisiana', 'United States', 14119);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 97901', '99810 Harper Terrace', 'Victoriaville', 'Québec', 'Canada', 31210);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 97901', '99810 Harper Terrace', 'Victoriaville', 'QuÃ©bec', 'Canada', 31210);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '7th Floor', '457 Roth Pass', 'Pemberton', 'British Columbia', 'Canada', 35115);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1927', '043 Moulton Plaza', 'Penhold', 'Alberta', 'Canada', 26724);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1756', '48735 Harbort Circle', 'Bronx', 'New York', 'United States', 1654);
@@ -1316,7 +1316,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '9th Floor', '87 Everett Lane', 'Cedar Rapids', 'Iowa', 'United States', 16526);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '3rd Floor', '76 Buhler Alley', 'Washington', 'District of Columbia', 'United States', 22755);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '15th Floor', '22016 Jenifer Hill', 'Oklahoma City', 'Oklahoma', 'United States', 21356);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 271', '227 Corben Avenue', 'Saint-Bruno-de-Montarville', 'Québec', 'Canada', 19241);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 271', '227 Corben Avenue', 'Saint-Bruno-de-Montarville', 'QuÃ©bec', 'Canada', 19241);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 92', '9 Becker Hill', 'Seattle', 'Washington', 'United States', 29930);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '2nd Floor', '535 Kim Parkway', 'Denton', 'England', 'United Kingdom', 27958);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 228', '571 Fremont Alley', 'Tempe', 'Arizona', 'United States', 13479);
@@ -1362,10 +1362,10 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 80', '41457 Londonderry Point', 'Irving', 'Texas', 'United States', 15419);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 979', '8 Golf Course Hill', 'Fruitvale', 'British Columbia', 'Canada', 22194);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '12th Floor', '9 Division Way', 'Akron', 'Ohio', 'United States', 8552);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 1780', '40343 Luster Drive', 'Pont-Rouge', 'Québec', 'Canada', 24431);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 1780', '40343 Luster Drive', 'Pont-Rouge', 'QuÃ©bec', 'Canada', 24431);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 83', '54373 Prairieview Junction', 'Washington', 'District of Columbia', 'United States', 26670);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '6th Floor', '5 Birchwood Drive', 'Saint Louis', 'Missouri', 'United States', 21872);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '90 Summerview Road', 'Vaudreuil-Dorion', 'Québec', 'Canada', 2009);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '90 Summerview Road', 'Vaudreuil-Dorion', 'QuÃ©bec', 'Canada', 2009);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 29470', '2 Lerdahl Lane', 'Brooklyn', 'New York', 'United States', 7026);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 65203', '95817 Service Hill', 'High River', 'Alberta', 'Canada', 14914);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 29729', '30 2nd Alley', 'Little Rock', 'Arkansas', 'United States', 15205);
@@ -1373,7 +1373,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 87527', '1 Schmedeman Drive', 'Alexandria', 'Virginia', 'United States', 22988);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 72394', '01691 Village Green Hill', 'Normanton', 'England', 'United Kingdom', 32979);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 43222', '7104 Vermont Pass', 'Port Hawkesbury', 'Nova Scotia', 'Canada', 11717);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1963', '635 Dayton Parkway', 'Danville', 'Québec', 'Canada', 9353);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1963', '635 Dayton Parkway', 'Danville', 'QuÃ©bec', 'Canada', 9353);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '4th Floor', '2 Bellgrove Circle', 'Sioux Falls', 'South Dakota', 'United States', 9234);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 562', '76 Basil Point', 'Des Moines', 'Iowa', 'United States', 20869);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '17th Floor', '42 Morrow Parkway', 'Hartford', 'Connecticut', 'United States', 31957);
@@ -1398,7 +1398,7 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 73', '814 Columbus Alley', 'Flushing', 'New York', 'United States', 9852);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 60083', '651 Bultman Lane', 'Chilliwack', 'British Columbia', 'Canada', 6685);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 69904', '1526 Buena Vista Plaza', 'Arlington', 'Virginia', 'United States', 21898);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '444 Hazelcrest Hill', 'Fermont', 'Québec', 'Canada', 6374);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '11th Floor', '444 Hazelcrest Hill', 'Fermont', 'QuÃ©bec', 'Canada', 6374);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1647', '5 Little Fleur Lane', 'Dalmeny', 'Saskatchewan', 'Canada', 21398);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1551', '19 Vermont Crossing', 'San Antonio', 'Texas', 'United States', 16080);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 77', '8168 Anniversary Court', 'Eastern Suburbs Mc', 'New South Wales', 'Australia', 14556);
@@ -1409,14 +1409,14 @@ insert into Address (CustomerID, Address1, Address2, City, State, country, Pinco
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 873', '0 Anderson Junction', 'Ogden', 'Utah', 'United States', 30253);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '12th Floor', '11237 7th Plaza', 'Oklahoma City', 'Oklahoma', 'United States', 6871);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 47', '77 Hanson Point', 'Wilkes Barre', 'Pennsylvania', 'United States', 5137);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 44171', '46 Melvin Plaza', 'Neuville', 'Québec', 'Canada', 5404);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 44171', '46 Melvin Plaza', 'Neuville', 'QuÃ©bec', 'Canada', 5404);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1083', '5 Barnett Center', 'Birmingham', 'Alabama', 'United States', 23437);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1773', '09132 Kim Point', 'Waco', 'Texas', 'United States', 26972);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1319', '4 Browning Street', 'San Diego', 'California', 'United States', 19107);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 92', '4 Bashford Pass', 'Indianapolis', 'Indiana', 'United States', 8372);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Suite 95', '4 Manitowish Court', 'Tampa', 'Florida', 'United States', 32178);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, '19th Floor', '20150 Kennedy Alley', 'Bronx', 'New York', 'United States', 30160);
-insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 16868', '56474 Debs Road', 'Fermont', 'Québec', 'Canada', 2335);
+insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 16868', '56474 Debs Road', 'Fermont', 'QuÃ©bec', 'Canada', 2335);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'PO Box 98578', '6715 Nelson Trail', 'Peoria', 'Arizona', 'United States', 31470);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Room 1059', '6521 Fordem Crossing', 'Irving', 'Texas', 'United States', 24471);
 insert into Address (CustomerID, Address1, Address2, City, State, country, Pincode) values (address_seq.nextval, 'Apt 1912', '9346 Farragut Pass', 'Vanderhoof', 'British Columbia', 'Canada', 34164);
@@ -2510,8 +2510,8 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 76, 'We''re Not Married!', 2005, 95, 'nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget', 6.8, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 55, 'Mission: Impossible - Ghost Protocol', 1993, 149, 'orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi', 5.1, 'Greece');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 24, '40 Pounds of Trouble', 2002, 125, 'volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus', 7.8, 'Japan');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 45, 'Lion King 1½, The', 2011, 117, 'accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', 3.7, 'China');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 99, 'JLG/JLG (JLG/JLG - autoportrait de décembre)', 2000, 101, 'vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus', 3.0, 'Madagascar');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 45, 'Lion King 1Â½, The', 2011, 117, 'accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', 3.7, 'China');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 99, 'JLG/JLG (JLG/JLG - autoportrait de dÃ©cembre)', 2000, 101, 'vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus', 3.0, 'Madagascar');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 3, 'Pollyanna', 1996, 124, 'ac est lacinia nisi venenatis tristique fusce congue diam id ornare', 4.3, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 12, 'Forest Warrior', 2012, 111, 'integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi', 6.3, 'Sweden');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 9, 'Weekend at Bernie''s', 1988, 144, 'non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl', 2.6, 'Indonesia');
@@ -2520,7 +2520,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 32, 'Gallowwalkers', 2004, 91, 'tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at', 3.4, 'Kazakhstan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 85, 'Allegheny Uprising', 2006, 105, 'integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero', 8.1, 'Argentina');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 25, 'A Matador''s Mistress', 2010, 138, 'leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede', 9.1, 'China');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 83, 'Wonderful Crook, The (Pas si méchant que ça)', 1997, 94, 'tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed', 2.5, 'Ukraine');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 83, 'Wonderful Crook, The (Pas si mÃ©chant que Ã§a)', 1997, 94, 'tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed', 2.5, 'Ukraine');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 95, 'This Is My Life', 2012, 118, 'aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non', 1.0, 'Bonaire, Saint Eustatius and Saba ');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 64, 'Mother India', 2011, 107, 'aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo', 7.0, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 7, 'Nobody Lives Forever', 2005, 121, 'maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque', 3.4, 'China');
@@ -2541,7 +2541,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 18, 'Planet of the Vampires (Terrore nello spazio)', 2003, 120, 'diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis', 5.8, 'Sweden');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 6, 'Printed Rainbow', 2012, 113, 'cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit', 8.8, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 57, 'Moving the Mountain', 1999, 120, 'nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in', 6.0, 'Peru');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 22, 'Werner - Gekotzt wird später', 2002, 118, 'massa id nisl venenatis lacinia aenean sit amet justo morbi', 4.2, 'Nigeria');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 22, 'Werner - Gekotzt wird spÃ¤ter', 2002, 118, 'massa id nisl venenatis lacinia aenean sit amet justo morbi', 4.2, 'Nigeria');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 67, 'Eastern Plays', 1989, 128, 'a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis', 9.7, 'Kazakhstan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 85, 'Scream of Stone (Cerro Torre: Schrei aus Stein)', 1991, 147, 'neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit', 9.8, 'Hong Kong');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 16, 'Make Them Die Slowly (Cannibal Ferox)', 1994, 105, 'venenatis non sodales sed tincidunt eu felis fusce posuere felis', 7.1, 'Indonesia');
@@ -2561,7 +2561,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 29, 'Whole Night, A (Toute une nuit)', 1989, 110, 'non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales', 1.4, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 80, 'All Dogs Christmas Carol, An', 2003, 126, 'at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum', 5.0, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 50, 'Looking for Hortense (Cherchez Hortense) ', 2009, 121, 'ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque', 2.4, 'Indonesia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 96, 'Prêt à tout', 2002, 146, 'vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget', 5.3, 'Argentina');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 96, 'PrÃªt Ã  tout', 2002, 146, 'vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget', 5.3, 'Argentina');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 96, 'Never Met Picasso', 2001, 130, 'blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue', 10.0, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 100, 'Somewhere in the Night', 1994, 133, 'ut massa quis augue luctus tincidunt nulla mollis molestie lorem', 8.5, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 30, 'Ole dole doff', 1996, 121, 'felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla', 2.6, 'Sweden');
@@ -2580,15 +2580,15 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 15, 'No Man of Her Own ', 2003, 96, 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam', 1.1, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 75, 'Helen of Troy', 2001, 146, 'in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus', 6.6, 'Ireland');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 57, 'Extraterrestrial (Extraterrestre)', 2002, 134, 'vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue', 5.5, 'Indonesia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 87, 'Body of Water (Syvälle salattu)', 1991, 110, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non', 9.8, 'China');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 87, 'Body of Water (SyvÃ¤lle salattu)', 1991, 110, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non', 9.8, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 33, 'Haunted Mansion, The', 1994, 140, 'quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin', 4.5, 'Russia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 15, 'Den tatuerade änkan (Tattooed Widow, The) ', 2004, 132, 'pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie', 6.6, 'Brazil');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 15, 'Den tatuerade Ã¤nkan (Tattooed Widow, The) ', 2004, 132, 'pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie', 6.6, 'Brazil');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 63, 'Dr. Jekyll and Mr. Hyde', 1999, 140, 'lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu', 5.2, 'Uganda');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 46, 'Harsh Times', 1983, 90, 'ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem', 8.9, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 46, 'Waiting Game, The', 1998, 128, 'turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel', 7.0, 'Ukraine');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 72, 'Perfume of the Lady in Black, The (Il profumo della signora in nero)', 2013, 146, 'orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a', 2.6, 'Thailand');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 66, 'Hi-Yo Silver', 2007, 144, 'sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl', 5.2, 'China');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 67, 'Patlabor: The Movie (Kidô keisatsu patorebâ: The Movie)', 1986, 105, 'maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at', 5.5, 'El Salvador');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 67, 'Patlabor: The Movie (KidÃ´ keisatsu patorebÃ¢: The Movie)', 1986, 105, 'maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at', 5.5, 'El Salvador');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 33, 'Paper, The', 2006, 149, 'dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst', 9.4, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 4, 'Lauderdale (a.k.a. Spring Break USA) (a.k.a. Spring Fever USA)', 1996, 116, 'donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit', 9.3, 'Reunion');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 8, 'Fortress 2', 2000, 144, 'ut volutpat sapien arcu sed augue aliquam erat volutpat in congue', 9.9, 'El Salvador');
@@ -2608,7 +2608,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 51, 'Get Over It', 1995, 99, 'vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo', 9.8, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 28, 'Peanuts - Die Bank zahlt alles', 1989, 131, 'ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla', 5.2, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 6, 'Running With Scissors', 2011, 140, 'proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem', 6.8, 'Greece');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 68, 'Lips of Blood (Lèvres de sang)', 1998, 145, 'nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris', 4.2, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 68, 'Lips of Blood (LÃ¨vres de sang)', 1998, 145, 'nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris', 4.2, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 71, 'Don''t Tell Mom the Babysitter''s Dead', 2002, 90, 'porttitor pede justo eu massa donec dapibus duis at velit', 1.7, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 3, 'The Face of Love', 2002, 94, 'ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique', 9.4, 'Colombia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 26, 'Jumping the Broom', 1991, 107, 'sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae', 4.8, 'China');
@@ -2625,7 +2625,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 49, 'Little Hamlet', 1998, 101, 'quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio', 8.9, 'Mexico');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 2, 'Grand Isle', 1998, 106, 'faucibus orci luctus et ultrices posuere cubilia curae mauris viverra', 4.7, 'France');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 75, 'Two Guys Talkin'' About Girls', 1993, 121, 'odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi', 8.8, 'Brazil');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 56, 'Den tatuerade änkan (Tattooed Widow, The) ', 1990, 137, 'morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id', 3.8, 'Mongolia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 56, 'Den tatuerade Ã¤nkan (Tattooed Widow, The) ', 1990, 137, 'morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id', 3.8, 'Mongolia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 29, 'Vanishing, The', 2010, 114, 'nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque', 6.4, 'Bosnia and Herzegovina');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 91, 'The Amazing Dr. Clitterhouse', 1966, 126, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris', 5.6, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 23, 'Star Trek IV: The Voyage Home', 2003, 137, 'dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante', 1.9, 'Albania');
@@ -2645,15 +2645,15 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 42, 'Wake Island', 1993, 137, 'in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut', 5.1, 'Azerbaijan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 97, 'Around the World in 80 Days', 2006, 112, 'rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper', 1.4, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 91, 'Giant Mechanical Man, The', 1998, 133, 'tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec', 5.3, 'Poland');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 15, 'Suzanne''s Career (La carrière de Suzanne)', 1997, 123, 'proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit', 3.1, 'Poland');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 15, 'Suzanne''s Career (La carriÃ¨re de Suzanne)', 1997, 123, 'proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit', 3.1, 'Poland');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 92, 'ZMD: Zombies of Mass Destruction', 2009, 137, 'fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis', 4.1, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 10, 'Restless', 2004, 122, 'nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus', 2.9, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 56, 'Lianna', 2009, 103, 'vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi', 4.7, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 70, 'Carts of Darkness', 2005, 136, 'vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl', 4.3, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 46, 'The Karen Carpenter Story', 2006, 122, 'fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat', 3.7, 'Senegal');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 30, 'Early Years: Erik Nietzsche Part 1, The (De unge år: Erik Nietzsche)', 1996, 149, 'nulla dapibus dolor vel est donec odio justo sollicitudin ut', 1.3, 'Venezuela');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 30, 'Early Years: Erik Nietzsche Part 1, The (De unge Ã¥r: Erik Nietzsche)', 1996, 149, 'nulla dapibus dolor vel est donec odio justo sollicitudin ut', 1.3, 'Venezuela');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 83, 'Caught', 1999, 114, 'aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras', 7.2, 'Poland');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 2, 'Happy We (Två killar och en tjej)', 2004, 146, 'amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor', 8.3, 'Japan');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 2, 'Happy We (TvÃ¥ killar och en tjej)', 2004, 146, 'amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor', 8.3, 'Japan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 13, 'Bird of the Air, A (Loop, The)', 2008, 118, 'habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum', 4.4, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 79, 'Broken Blossoms or The Yellow Man and the Girl', 2009, 129, 'faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat', 5.6, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 2, 'Finding Neverland', 2007, 109, 'nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in', 5.6, 'Indonesia');
@@ -2661,7 +2661,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 36, 'Homegrown', 2008, 91, 'vel augue vestibulum ante ipsum primis in faucibus orci luctus', 8.8, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 31, 'Tyson', 2009, 131, 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam', 9.3, 'Portugal');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 65, 'Words, The', 1997, 138, 'rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi', 2.6, 'Russia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 86, 'Temptation (Tentação)', 2001, 105, 'odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor', 6.3, 'United States');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 86, 'Temptation (TentaÃ§Ã£o)', 2001, 105, 'odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor', 6.3, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 62, 'Lo', 2010, 132, 'nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget', 2.7, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 79, 'French Roast', 1998, 90, 'suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in', 8.4, 'Honduras');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 29, 'Late Great Planet Earth, The', 2008, 100, 'tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse', 8.5, 'Albania');
@@ -2673,12 +2673,12 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 8, 'How to Make Money Selling Drugs', 2010, 140, 'leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in', 7.5, 'Czech Republic');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 58, 'Perfumed Nightmare', 1978, 135, 'sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis', 3.6, 'Sweden');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 82, 'General, The', 2010, 134, 'semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam', 2.6, 'China');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 51, 'Tokyo Decadence (Topâzu)', 1994, 104, 'purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse', 8.1, 'Yemen');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 51, 'Tokyo Decadence (TopÃ¢zu)', 1994, 104, 'purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse', 8.1, 'Yemen');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 70, 'Saw VII 3D - The Final Chapter', 2012, 143, 'eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in', 5.2, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 13, 'Les Invisibles', 1992, 128, 'orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut', 3.2, 'Czech Republic');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 43, 'Mr. Wrong', 2009, 147, 'varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et', 9.1, 'Montenegro');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 17, 'The Boys', 2006, 92, 'est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue', 8.5, 'Denmark');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 88, 'Lotta 2: Lotta flyttar hemifrån', 1990, 114, 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet', 2.2, 'Russia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 88, 'Lotta 2: Lotta flyttar hemifrÃ¥n', 1990, 114, 'lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet', 2.2, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 76, 'Beautiful City (Shah-re ziba)', 1966, 131, 'enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum', 2.5, 'France');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 51, 'Replacements, The', 2013, 106, 'nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus', 6.3, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 24, 'One of Our Aircraft Is Missing', 1994, 148, 'hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut', 8.3, 'China');
@@ -2687,7 +2687,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 87, 'Alice in Wonderland', 2006, 123, 'odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac', 7.3, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 80, 'Catching Hell', 2008, 134, 'sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea', 2.8, 'Czech Republic');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 34, 'Taxi zum Klo', 2005, 112, 'eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui', 5.9, 'Turkmenistan');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 30, 'Charm''s Incidents (Charms Zwischenfälle)', 1987, 113, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet', 5.6, 'Bhutan');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 30, 'Charm''s Incidents (Charms ZwischenfÃ¤lle)', 1987, 113, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet', 5.6, 'Bhutan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 73, 'Shadowboxer', 2007, 138, 'eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci', 4.6, 'Vietnam');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 29, 'Texas Terror', 2001, 110, 'cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi', 7.2, 'Puerto Rico');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 77, 'Living with the Fosters', 1998, 118, 'egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero', 3.2, 'France');
@@ -2726,13 +2726,13 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 90, 'Aliens of the Deep', 2004, 119, 'sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in', 3.8, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 16, 'Blind Alley', 2011, 126, 'neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque', 8.0, 'Brazil');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 77, 'Unbeatable (Ji zhan)', 1992, 137, 'curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac', 2.6, 'Russia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 64, 'Counterfeiters, The (Die Fälscher)', 2010, 131, 'consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris', 3.3, 'Russia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 64, 'Counterfeiters, The (Die FÃ¤lscher)', 2010, 131, 'consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris', 3.3, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 46, 'Flowing (Nagareru)', 2010, 147, 'tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est', 8.9, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 4, 'Ismael', 2003, 109, 'a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor', 9.4, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 17, 'Diary of Anne Frank, The', 2008, 92, 'justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam', 8.3, 'Finland');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 24, 'Defenders of Riga', 2005, 118, 'nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum', 8.1, 'Ireland');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 13, 'Magnum Force', 2010, 103, 'sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi', 5.2, 'Brazil');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 55, 'Mystery of Picasso, The (Le mystère Picasso)', 1993, 109, 'mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget', 5.1, 'Estonia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 55, 'Mystery of Picasso, The (Le mystÃ¨re Picasso)', 1993, 109, 'mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget', 5.1, 'Estonia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 78, 'Reunion in France', 1992, 125, 'nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac', 3.3, 'Japan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 4, 'Ronde, La', 2010, 139, 'nam nulla integer pede justo lacinia eget tincidunt eget tempus vel', 8.5, 'Cuba');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 92, 'Knock on Any Door', 2008, 147, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla', 9.5, 'Syria');
@@ -2764,9 +2764,9 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 67, 'Disraeli', 2003, 142, 'donec quis orci eget orci vehicula condimentum curabitur in libero ut massa', 2.6, 'United States');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 37, 'All That Heaven Allows', 1987, 114, 'quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper', 4.8, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 45, 'Dragnet', 2001, 132, 'in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis', 8.1, 'South Africa');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 10, 'Thirst (a.k.a. Three Strange Loves) (Törst)', 2005, 132, 'enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis', 7.4, 'Japan');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 10, 'Thirst (a.k.a. Three Strange Loves) (TÃ¶rst)', 2005, 132, 'enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis', 7.4, 'Japan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 21, 'Magic', 1965, 123, 'quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam', 9.0, 'France');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 59, 'Paimen, piika ja emäntä', 2007, 104, 'ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non', 7.5, 'Honduras');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 59, 'Paimen, piika ja emÃ¤ntÃ¤', 2007, 104, 'ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non', 7.5, 'Honduras');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 5, 'Henry', 2009, 138, 'elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in', 8.0, 'Bosnia and Herzegovina');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 19, 'Revolutionary Road', 2011, 138, 'potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur', 4.6, 'Dominican Republic');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 68, 'Deuces Wild', 2004, 95, 'massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis', 4.4, 'Nepal');
@@ -2786,7 +2786,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 29, 'Hills Have Eyes Part II, The', 1984, 90, 'lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque', 1.4, 'Ukraine');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 94, 'Cover-Up', 2010, 112, 'tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy', 7.2, 'Canada');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 64, 'Charlie''s Angels', 2002, 102, 'vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis', 9.6, 'Colombia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 10, 'César', 2013, 116, 'dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper', 1.5, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 10, 'CÃ©sar', 2013, 116, 'dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper', 1.5, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 22, '36 fillette', 2005, 90, 'nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem', 4.5, 'Brazil');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 55, 'Alucarda', 1995, 118, 'et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum', 3.7, 'Colombia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 86, 'Volcano High (Whasango)', 2003, 96, 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh', 5.3, 'Indonesia');
@@ -2856,7 +2856,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 34, 'Jerry and Tom', 1998, 118, 'sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec', 5.4, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 66, 'Commander Hamilton (Hamilton)', 1991, 142, 'consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices', 1.4, 'Ukraine');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 19, 'Beautiful Dreamer: Brian Wilson and the Story of ''Smile''', 1996, 140, 'imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed', 4.6, 'Ukraine');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 98, 'Wings of Desire (Himmel über Berlin, Der)', 1999, 115, 'rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut', 3.5, 'Russia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 98, 'Wings of Desire (Himmel Ã¼ber Berlin, Der)', 1999, 115, 'rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut', 3.5, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 2, 'Amityville: Dollhouse', 1995, 136, 'nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam', 7.9, 'Thailand');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 69, 'To Do List, The', 1993, 118, 'in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis', 3.1, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 47, 'Hamsun', 2007, 90, 'tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at', 8.7, 'Mongolia');
@@ -2890,8 +2890,8 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 34, 'One Week', 2003, 103, 'integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc', 6.7, 'Mexico');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 19, 'Jay-Z: Made in America', 2010, 126, 'volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus', 4.2, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 74, 'Gulliver''s Travels', 1985, 141, 'velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros', 7.2, 'Syria');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 93, 'Oceans (Océans)', 1992, 133, 'odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem', 7.6, 'Indonesia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 4, 'Ingmar Bergman Makes a Movie (Ingmar Bergman gör en film)', 1999, 128, 'id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel', 6.9, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 93, 'Oceans (OcÃ©ans)', 1992, 133, 'odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem', 7.6, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 4, 'Ingmar Bergman Makes a Movie (Ingmar Bergman gÃ¶r en film)', 1999, 128, 'id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel', 6.9, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 84, 'Mysterious X, The (Sealed Orders) (Det hemmelighedsfulde X)', 1996, 112, 'sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus', 1.7, 'Pakistan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 97, 'The Admirable Crichton', 2005, 142, 'interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien', 3.3, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 24, 'Death Rides a Horse (Da uomo a uomo)', 1998, 113, 'velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat', 1.2, 'Poland');
@@ -2906,7 +2906,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 70, 'When You''re Strange', 2001, 116, 'condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu', 2.3, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 55, 'Journey of Natty Gann, The', 1992, 143, 'quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu', 8.5, 'Vietnam');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 76, 'Verdict, The', 2009, 135, 'integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo', 7.5, 'Panama');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 16, 'Companeros (Vamos a matar, compañeros)', 1994, 99, 'libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu', 5.1, 'China');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 16, 'Companeros (Vamos a matar, compaÃ±eros)', 1994, 99, 'libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu', 5.1, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 8, 'Jacqueline Susann''s Once Is Not Enough', 2007, 101, 'lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et', 5.0, 'Nicaragua');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 47, 'Not Another Not Another Movie', 2009, 96, 'id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque', 2.0, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 90, 'Eaten Alive (Mangiati Vivi)', 1992, 105, 'est et tempus semper est quam pharetra magna ac consequat metus', 1.4, 'China');
@@ -2934,11 +2934,11 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 13, 95, 'Mouse Hunt', 2010, 124, 'commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing', 2.6, 'Madagascar');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 25, 'Patrice O''Neal: Elephant in the Room', 1991, 110, 'adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus', 4.4, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 67, 'C.H.O.M.P.S.', 1994, 129, 'rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat', 7.7, 'Mongolia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 1, 'Charm''s Incidents (Charms Zwischenfälle)', 1989, 109, 'pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed', 8.2, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 1, 'Charm''s Incidents (Charms ZwischenfÃ¤lle)', 1989, 109, 'pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed', 8.2, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 7, 'Why Do Fools Fall In Love?', 2008, 128, 'nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc', 7.3, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 9, 96, 'Swindle', 2001, 136, 'in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus', 5.9, 'Pakistan');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 68, 'Howl''s Moving Castle (Hauru no ugoku shiro)', 2009, 129, 'et commodo vulputate justo in blandit ultrices enim lorem ipsum', 2.0, 'Indonesia');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 20, 'Emil i Lönneberga', 2012, 138, 'id mauris vulputate elementum nullam varius nulla facilisi cras non velit', 9.7, 'Poland');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 12, 20, 'Emil i LÃ¶nneberga', 2012, 138, 'id mauris vulputate elementum nullam varius nulla facilisi cras non velit', 9.7, 'Poland');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 72, 'Happiness (Schastye)', 2006, 116, 'quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo', 7.7, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 45, 'Oscar and Lucinda (a.k.a. Oscar  Lucinda)', 1992, 106, 'velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget', 8.0, 'Russia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 47, '3 Needles', 2010, 110, 'arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis', 4.0, 'Indonesia');
@@ -2965,12 +2965,12 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 45, 'Red Dust', 1995, 90, 'purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam', 1.0, 'South Africa');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 9, 'Adrenalin: Fear the Rush', 1993, 144, 'id consequat in consequat ut nulla sed accumsan felis ut at dolor', 2.9, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 19, 'Box, The', 1985, 108, 'ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra', 8.3, 'Portugal');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 84, 'Fuck You, Goethe (Fack Ju Göhte)', 2003, 123, 'et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum', 4.7, 'Egypt');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 84, 'Fuck You, Goethe (Fack Ju GÃ¶hte)', 2003, 123, 'et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum', 4.7, 'Egypt');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 6, 'Dead Man Down', 1995, 127, 'praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio', 4.5, 'Portugal');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 53, 'Guard, The', 2005, 119, 'posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat', 2.3, 'Morocco');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 1, 16, 'Wild, Wild Planet (I criminali della galassia)', 1993, 117, 'suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus', 4.7, 'Nigeria');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 69, 'Pictures of the Old World (Obrazy starého sveta)', 1961, 120, 'in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio', 3.6, 'Brazil');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 70, 'Japanese Summer: Double Suicide (Muri shinjû: Nihon no natsu)', 2001, 109, 'nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit', 1.7, 'Palestinian Territory');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 69, 'Pictures of the Old World (Obrazy starÃ©ho sveta)', 1961, 120, 'in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio', 3.6, 'Brazil');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 70, 'Japanese Summer: Double Suicide (Muri shinjÃ»: Nihon no natsu)', 2001, 109, 'nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit', 1.7, 'Palestinian Territory');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 80, 'Sherlock Holmes in Washington', 2007, 96, 'nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa', 2.3, 'Thailand');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 14, 'Little Foxes, The', 2006, 115, 'elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue', 8.6, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 7, 'Night in Old Mexico, A', 2011, 106, 'magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt', 3.6, 'United States');
@@ -2992,7 +2992,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 96, 'House of Branching Love, The (Haarautuvan rakkauden talo)', 1998, 144, 'aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem', 5.7, 'Paraguay');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 3, 38, 'Assassination Bureau, The', 2002, 110, 'nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio', 1.9, 'France');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 13, 'Mrs. Parker and the Vicious Circle', 2002, 109, 'congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut', 3.2, 'Portugal');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 70, 'Perifery (Härmä)', 1996, 119, 'etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras', 5.7, 'China');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 70, 'Perifery (HÃ¤rmÃ¤)', 1996, 119, 'etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras', 5.7, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 92, 'Life with Mikey', 2006, 147, 'vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 8.3, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 6, 48, 'Facing the Truth (At kende sandheden)', 2008, 95, 'blandit nam nulla integer pede justo lacinia eget tincidunt eget', 8.6, 'Portugal');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 4, 51, 'Age of Dinosaurs', 2009, 108, 'pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper', 6.8, 'Indonesia');
@@ -3041,7 +3041,7 @@ insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, Movi
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 8, 50, 'Homeward Bound: The Incredible Journey', 1997, 104, 'ligula sit amet eleifend pede libero quis orci nullam molestie nibh in', 2.2, 'Philippines');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 7, 12, 'The Stranger''s Return', 1998, 109, 'vehicula consequat morbi a ipsum integer a nibh in quis', 1.5, 'China');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 43, 'New Wave, A', 1986, 109, 'integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel', 4.7, 'Afghanistan');
-insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 26, 'Tale of Zatoichi, The (Zatôichi monogatari) (Zatôichi 1)', 1997, 96, 'sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et', 5.7, 'Indonesia');
+insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 5, 26, 'Tale of Zatoichi, The (ZatÃ´ichi monogatari) (ZatÃ´ichi 1)', 1997, 96, 'sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et', 5.7, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 11, 33, 'Angel', 1989, 111, 'nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh', 9.3, 'Indonesia');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 10, 80, 'Aviator''s Wife, The (La femme de l''aviateur)', 2007, 114, 'mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a', 1.5, 'Thailand');
 insert into Movie (MovieID, GenreID, DirectorID, MovieTitle, DateOfRelease, MovieDuration, MovieDescription, Ratings, CountryOrigin) values (movie_seq.nextval, 2, 19, 'Singham', 2012, 142, 'quisque porta volutpat erat quisque erat eros viverra eget congue eget', 5.2, 'Philippines');
@@ -9249,110 +9249,110 @@ GRANT pkg_customer_management
 GRANT pkg_movie_management;
  
 GRANT EXECUTE ON create_movie TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE create_movie TO DB_CONTENTMGR;
+GRANT EXECUTE ON create_movie TO DB_CONTENTMGR;
 
-GRANT EXECUTE ON PROCEDURE create_movie TO DB_MANAGER;
+GRANT EXECUTE ON create_movie TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE create_customer TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE create_customer TO DB_MANAGER;
+GRANT EXECUTE ON  create_customer TO DB_BILLINGMGR;
+GRANT EXECUTE ON  create_customer TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE add_or_update_address TO DB_MANAGER;
+GRANT EXECUTE ON  add_or_update_address TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE add_or_update_address TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE add_or_update_address TO DB_MANAGER;
+GRANT EXECUTE ON  add_or_update_address TO DB_BILLINGMGR;
+GRANT EXECUTE ON  add_or_update_address TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE add_or_update_address TO DB_MANAGER;
+GRANT EXECUTE ON  add_or_update_address TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE add_subscription_plan TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE add_subscription_plan TO DB_MANAGER;
+GRANT EXECUTE ON  add_subscription_plan TO DB_BILLINGMGR;
+GRANT EXECUTE ON  add_subscription_plan TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE add_subscription_plan TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE add_subscription_plan TO DB_MANAGER;
+GRANT EXECUTE ON  add_subscription_plan TO DB_BILLINGMGR;
+GRANT EXECUTE ON  add_subscription_plan TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE change_customer_email TO DB_MANAGER;
-GRANT EXECUTE ON PROCEDURE change_customer_email TO DB_BILLINGMGR;
+GRANT EXECUTE ON  change_customer_email TO DB_MANAGER;
+GRANT EXECUTE ON  change_customer_email TO DB_BILLINGMGR;
 
-GRANT EXECUTE ON PROCEDURE add_genre TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE add_genre TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_genre TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_genre TO DB_CONTENTMGR;
 
-GRANT EXECUTE ON PROCEDURE add_movie_to_region TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE add_movie_to_region TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_movie_to_region TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_movie_to_region TO DB_CONTENTMGR;
 
-GRANT EXECUTE ON PROCEDURE add_to_watchlisthistory TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE add_to_watchlisthistory TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_to_watchlisthistory TO DB_CONTENTMGR;
+GRANT EXECUTE ON  add_to_watchlisthistory TO DB_CONTENTMGR;
 
-GRANT EXECUTE ON PROCEDURE create_purchase TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE create_purchase TO DB_MANAGER;
+GRANT EXECUTE ON  create_purchase TO DB_BILLINGMGR;
+GRANT EXECUTE ON  create_purchase TO DB_MANAGER;
 
-GRANT EXECUTE ON PROCEDURE TOGGLE_DOWNLOAD TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE TOGGLE_DOWNLOAD TO DB_MANAGER;
-
-
-GRANT EXECUTE ON PROCEDURE TOGGLE_FAVORITE TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE TOGGLE_FAVORITE TO DB_MANAGER;
+GRANT EXECUTE ON  TOGGLE_DOWNLOAD TO DB_CONTENTMGR;
+GRANT EXECUTE ON  TOGGLE_DOWNLOAD TO DB_MANAGER;
 
 
-GRANT EXECUTE ON PROCEDURE TOGGLE_WATCHLIST TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE TOGGLE_WATCHLIST TO DB_MANAGER;
+GRANT EXECUTE ON  TOGGLE_FAVORITE TO DB_CONTENTMGR;
+GRANT EXECUTE ON  TOGGLE_FAVORITE TO DB_MANAGER;
 
 
-GRANT EXECUTE ON PROCEDURE UPDATE_ACTOR TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE UPDATE_ACTOR TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE UPDATE_DIRECTOR TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE UPDATE_DIRECTOR TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE UPDATE_MOVIE_RATINGS TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE UPDATE_MOVIE_RATINGS TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_SUBTITLE TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_SUBTITLE TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_SUBSCRIPTION_PLAN TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_SUBSCRIPTION_PLAN TO DB_MANAGER;
+GRANT EXECUTE ON  TOGGLE_WATCHLIST TO DB_CONTENTMGR;
+GRANT EXECUTE ON  TOGGLE_WATCHLIST TO DB_MANAGER;
 
 
-GRANT EXECUTE ON PROCEDURE DELETE_MOVIE_FROM_REGION TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_MOVIE_FROM_REGION TO DB_MANAGER;
+GRANT EXECUTE ON  UPDATE_ACTOR TO DB_CONTENTMGR;
+GRANT EXECUTE ON  UPDATE_ACTOR TO DB_MANAGER;
+
+GRANT EXECUTE ON  UPDATE_DIRECTOR TO DB_CONTENTMGR;
+GRANT EXECUTE ON  UPDATE_DIRECTOR TO DB_MANAGER;
+
+GRANT EXECUTE ON  UPDATE_MOVIE_RATINGS TO DB_CONTENTMGR;
+GRANT EXECUTE ON  UPDATE_MOVIE_RATINGS TO DB_MANAGER;
+
+GRANT EXECUTE ON  DELETE_SUBTITLE TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_SUBTITLE TO DB_MANAGER;
+
+GRANT EXECUTE ON  DELETE_SUBSCRIPTION_PLAN TO DB_BILLINGMGR;
+GRANT EXECUTE ON  DELETE_SUBSCRIPTION_PLAN TO DB_MANAGER;
 
 
-GRANT EXECUTE ON PROCEDURE DELETE_ACTOR TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_ACTOR TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_MOVIE_FROM_REGION TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_MOVIE_FROM_REGION TO DB_MANAGER;
 
 
-GRANT EXECUTE ON PROCEDURE DELETE_CAST TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_CAST TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_CUSTOMER TO DB_BILLINGMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_CUSTOMER TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_DIRECTOR TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_DIRECTOR TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_GENRE TO DB_CONTENTMGR;
-GRANT EXECUTE ON PROCEDURE DELETE_GENRE TO DB_MANAGER;
-
-GRANT EXECUTE ON PROCEDURE DELETE_MOVIE TO DB_MANAGER;
-GRANT EXECUTE ON PROCEDURE DELETE_MOVIE TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_ACTOR TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_ACTOR TO DB_MANAGER;
 
 
-GRANT EXECUTE ON FUNCTION REGION_RESTRICTED_MOVIE1 TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION REGION_RESTRICTED_MOVIE1 TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_CAST TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_CAST TO DB_MANAGER;
 
-GRANT EXECUTE ON FUNCTION GET_MOVIE_RECOMMENTATION TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION GET_MOVIE_RECOMMENTATION TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_CUSTOMER TO DB_BILLINGMGR;
+GRANT EXECUTE ON  DELETE_CUSTOMER TO DB_MANAGER;
 
-GRANT EXECUTE ON FUNCTION GET_ACTOR_MOVIES TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION GET_ACTOR_MOVIES TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_DIRECTOR TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_DIRECTOR TO DB_MANAGER;
 
-GRANT EXECUTE ON FUNCTION GET_DIRECTOR_MOVIES TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION GET_DIRECTOR_MOVIES TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_GENRE TO DB_CONTENTMGR;
+GRANT EXECUTE ON  DELETE_GENRE TO DB_MANAGER;
 
-GRANT EXECUTE ON FUNCTION GET_MOVIES TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION GET_MOVIES TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_MOVIE TO DB_MANAGER;
+GRANT EXECUTE ON  DELETE_MOVIE TO DB_CONTENTMGR;
 
-GRANT EXECUTE ON FUNCTION GET_SCREENLIMIT_BY_CUSTOMER TO DB_CONTENTMGR;
-GRANT EXECUTE ON FUNCTION GET_SCREENLIMIT_BY_CUSTOMER TO DB_BILLINGMG;
+
+GRANT EXECUTE ON  REGION_RESTRICTED_MOVIE1 TO DB_CONTENTMGR;
+GRANT EXECUTE ON  REGION_RESTRICTED_MOVIE1 TO DB_MANAGER;
+
+GRANT EXECUTE ON  GET_MOVIE_RECOMMENTATION TO DB_CONTENTMGR;
+GRANT EXECUTE ON  GET_MOVIE_RECOMMENTATION TO DB_MANAGER;
+
+GRANT EXECUTE ON  GET_ACTOR_MOVIES TO DB_CONTENTMGR;
+GRANT EXECUTE ON  GET_ACTOR_MOVIES TO DB_MANAGER;
+
+GRANT EXECUTE ON  GET_DIRECTOR_MOVIES TO DB_CONTENTMGR;
+GRANT EXECUTE ON  GET_DIRECTOR_MOVIES TO DB_MANAGER;
+
+GRANT EXECUTE ON  GET_MOVIES TO DB_CONTENTMGR;
+GRANT EXECUTE ON  GET_MOVIES TO DB_MANAGER;
+
+GRANT EXECUTE ON  GET_SCREENLIMIT_BY_CUSTOMER TO DB_CONTENTMGR;
+GRANT EXECUTE ON  GET_SCREENLIMIT_BY_CUSTOMER TO DB_BILLINGMG;
 
 
 
