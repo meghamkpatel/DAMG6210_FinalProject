@@ -22,7 +22,7 @@ END;
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
---changes the status of the customer upon purchasing a new plan
+--changes the status of the customer upon purchasing a new plan-----n/a
 CREATE OR REPLACE TRIGGER set_status
 AFTER INSERT ON Purchase
 FOR EACH ROW
@@ -34,7 +34,7 @@ END;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--- Deletes the rows in watch list whenever an occurance of the same details are added in the watch history table 
+-- Deletes the rows in watch list whenever an occurance of the same details are added in the watch history table ---n/a
 CREATE OR REPLACE TRIGGER delete_watchlist_row
 AFTER INSERT ON watch_history
 FOR EACH ROW
