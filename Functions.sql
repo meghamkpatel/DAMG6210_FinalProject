@@ -183,7 +183,7 @@ END;
 ------------------------------------------------------------------------------
 
 --Renews plan adds a row to the purchase table
-CREATE OR REPLACE FUNCTION auto_renew_plan(plan_id IN NUMBER, customer_id IN NUMBER)
+CREATE OR REPLACE FUNCTION auto_renew_plan(plan_id IN NUMBER, customer_id IN NUMBER)---n/a
 RETURN NUMBER
 IS
   purchase_id NUMBER;
