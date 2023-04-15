@@ -1,5 +1,5 @@
 --Procedures
-------------------------------------------------------------------------------DONE
+------------------------------------------------------------------------------DONE content manager
 create or replace PROCEDURE CREATE_MOVIE (
     VARGenre genre.genrename%type,
     VARDirectorFirstName director.DirectorFirstName%type,
@@ -74,7 +74,7 @@ execute create_movie('genre', 't','z','dsfsd',null, 34,'sfsdfsdsf',3, 'UK');
 execute create_movie('genre', '','z','dsfsd',null, 34,'sfsdfsdsf',3, 'UK');
 execute create_movie('genre', 'megha', 'patel', 'cats', 1999, 3, 'this is a test',3.5, 'alaska');
 /
---------------------------------------------------------------------------------------------------------- DONE
+--------------------------------------------------------------------------------------------------------- DONE 
 create or replace PROCEDURE CREATE_CUSTOMER(
     vUserFirstName customer.userfirstname%type, 
     vUserLastName customer.userlastname%type,
