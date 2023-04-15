@@ -213,20 +213,29 @@ CREATE OR REPLACE FUNCTION get_screenlimit_by_customer (
     customer_id NUMBER
 ) RETURN screen_limit_row AS
     screenlimit_info screen_limit_row;
+    rec_count NUMBER;
 BEGIN
-    SELECT
-        screen_limit_row(p.customerid, c.userfirstname, s.planname, s.screenlimit)
+    SELECT COUNT(*) INTO rec_count
+    FROM purchase p
+    JOIN subscription_plan s ON p.planid = s.planid
+    JOIN customer c ON c.customerid = p.customerid
+    WHERE p.customerid = customer_id;
+
+    IF rec_count = 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'No records found for customer with id ' || customer_id);
+    END IF;
+    
+    SELECT screen_limit_row(p.customerid, c.userfirstname, s.planname, s.screenlimit)
     INTO screenlimit_info
-    FROM
-             purchase p
-        JOIN subscription_plan s ON p.planid = s.planid
-        JOIN customer          c ON c.customerid = p.customerid
-    WHERE
-        p.customerid = customer_id
-    ORDER BY
-        p.startdate DESC
+    FROM purchase p
+    JOIN subscription_plan s ON p.planid = s.planid
+    JOIN customer c ON c.customerid = p.customerid
+    WHERE p.customerid = customer_id
+    ORDER BY p.startdate DESC
     FETCH FIRST 1 ROW ONLY;
+
     RETURN screenlimit_info;
+
 END;
 
 -- Function call
