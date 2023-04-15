@@ -17,3 +17,4 @@ To run our Project 4 here are instructions:
 7. change account to DB_MANAGER with password DUSMS@2023dman
 
 * Please view the Database_Roles_Script.sql to see how we created and granted user access
+* To view our reports and views please check views.sql
