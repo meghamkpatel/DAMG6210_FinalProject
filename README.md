@@ -1,4 +1,4 @@
-# DAMG6210_FinalProject
+# Movie Streaming Database
 
 Dear TA Team,
 
